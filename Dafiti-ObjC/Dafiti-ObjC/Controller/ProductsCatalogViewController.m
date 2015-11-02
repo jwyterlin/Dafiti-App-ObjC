@@ -14,6 +14,9 @@
 // Custom Cells
 #import "ProductCell.h"
 
+// Categories
+#import "UITableView+Helper.h"
+
 @interface ProductsCatalogViewController()<UITableViewDataSource,UITableViewDelegate>
 
 @property(weak,nonatomic) IBOutlet UITableView *tableView;
@@ -30,6 +33,9 @@
     [super viewDidLoad];
     
     self.navigationItem.title = @"Products";
+    
+    [self.tableView registerNibForCellReuseIdentifier:kNibNameProductCell];
+    [self.tableView removeSeparator];
     
     [self downloadProducts];
     
