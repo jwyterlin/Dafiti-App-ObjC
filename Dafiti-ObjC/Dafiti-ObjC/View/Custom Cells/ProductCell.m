@@ -18,6 +18,10 @@
 @property(weak,nonatomic) IBOutlet UILabel *manufacturer;
 @property(weak,nonatomic) IBOutlet UILabel *price;
 
+@property(weak,nonatomic) IBOutlet NSLayoutConstraint *nameWidth;
+@property(weak,nonatomic) IBOutlet NSLayoutConstraint *manufacturerWidth;
+@property(weak,nonatomic) IBOutlet NSLayoutConstraint *priceWidth;
+
 @end
 
 @implementation ProductCell
@@ -50,6 +54,8 @@
     if ( product == nil ) {
         
         cell.name.text = @"";
+        cell.manufacturer.text = @"";
+        cell.price.text = @"";
         
         return;
         
@@ -58,6 +64,20 @@
     cell.name.text = product.name;
     cell.manufacturer.text = product.manufacturer;
     cell.price.text = [NSString stringWithFormat:@"$ %.2f", [product.salePrice doubleValue]];
+    
+    int rightWidth = tableView.width - cell.name.x - 8;
+    
+    if ( cell.nameWidth.constant != rightWidth ) {
+    
+        cell.nameWidth.constant = rightWidth;
+        cell.manufacturerWidth.constant = rightWidth;
+        cell.priceWidth.constant = rightWidth;
+        
+    }
+
+    [cell.name setNeedsUpdateConstraints];
+    [cell.manufacturer setNeedsUpdateConstraints];
+    [cell.price setNeedsUpdateConstraints];
     
     [cell defineUserPhotoWithProduct:product tableView:tableView indexPath:indexPath cell:cell];
     

@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+// Categories
+#import "UIView+Helper.h"
+
 @interface GenericCell : UITableViewCell
 
 @end

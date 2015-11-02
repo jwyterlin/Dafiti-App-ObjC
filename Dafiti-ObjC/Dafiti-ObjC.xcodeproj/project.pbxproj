@@ -32,6 +32,7 @@
 		7BBC2A981BE8236200CBF2BD /* Indicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BBC2A971BE8236200CBF2BD /* Indicator.m */; };
 		7BBC2A9D1BE8272D00CBF2BD /* UITableView+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BBC2A9C1BE8272D00CBF2BD /* UITableView+Helper.m */; };
 		7BBC2AA21BE8286600CBF2BD /* ImageService.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BBC2AA11BE8286600CBF2BD /* ImageService.m */; };
+		7BBC2AA61BE82E2A00CBF2BD /* UIView+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BBC2AA51BE82E2A00CBF2BD /* UIView+Helper.m */; };
 		873CD34F871FEA77E5268A63 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EF87AB76D7749EC36DD95C0C /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -102,6 +103,8 @@
 		7BBC2A9C1BE8272D00CBF2BD /* UITableView+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UITableView+Helper.m"; path = "Categories/UITableView+Helper.m"; sourceTree = "<group>"; };
 		7BBC2AA01BE8286600CBF2BD /* ImageService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageService.h; path = Service/ImageService.h; sourceTree = "<group>"; };
 		7BBC2AA11BE8286600CBF2BD /* ImageService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageService.m; path = Service/ImageService.m; sourceTree = "<group>"; };
+		7BBC2AA41BE82E2A00CBF2BD /* UIView+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Helper.h"; path = "Categories/UIView+Helper.h"; sourceTree = "<group>"; };
+		7BBC2AA51BE82E2A00CBF2BD /* UIView+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Helper.m"; path = "Categories/UIView+Helper.m"; sourceTree = "<group>"; };
 		C2410786DA854FAD339AC95D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		CD22A6A18EDA6F0C2BBBCAE6 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		EF87AB76D7749EC36DD95C0C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -432,6 +435,7 @@
 		7BBC2A991BE8270A00CBF2BD /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				7BBC2AA31BE82E1500CBF2BD /* UIView */,
 				7BBC2A9A1BE8271200CBF2BD /* UITableView */,
 			);
 			name = Categories;
@@ -453,6 +457,15 @@
 				7BBC2AA11BE8286600CBF2BD /* ImageService.m */,
 			);
 			name = ImageService;
+			sourceTree = "<group>";
+		};
+		7BBC2AA31BE82E1500CBF2BD /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				7BBC2AA41BE82E2A00CBF2BD /* UIView+Helper.h */,
+				7BBC2AA51BE82E2A00CBF2BD /* UIView+Helper.m */,
+			);
+			name = UIView;
 			sourceTree = "<group>";
 		};
 		C608F47EA8B68C6E5A98FCDB /* Frameworks */ = {
@@ -659,6 +672,7 @@
 				7B90264B1BE7D13800728508 /* main.m in Sources */,
 				7BBC2A981BE8236200CBF2BD /* Indicator.m in Sources */,
 				7B0157A11BE8079B001DEB37 /* Routes.m in Sources */,
+				7BBC2AA61BE82E2A00CBF2BD /* UIView+Helper.m in Sources */,
 				7B0157A61BE81331001DEB37 /* ProductModel.m in Sources */,
 				7B0157921BE80754001DEB37 /* GenericService.m in Sources */,
 				7BBC2A941BE8227E00CBF2BD /* GenericViewController.m in Sources */,
