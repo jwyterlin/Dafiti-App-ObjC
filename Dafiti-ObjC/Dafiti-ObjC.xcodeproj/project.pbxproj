@@ -13,6 +13,9 @@
 		7B01579B1BE80786001DEB37 /* Connection.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B01579A1BE80786001DEB37 /* Connection.m */; };
 		7B01579E1BE80791001DEB37 /* JWNetAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B01579D1BE80791001DEB37 /* JWNetAPIClient.m */; };
 		7B0157A11BE8079B001DEB37 /* Routes.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B0157A01BE8079B001DEB37 /* Routes.m */; };
+		7B0157A61BE81331001DEB37 /* ProductModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B0157A51BE81331001DEB37 /* ProductModel.m */; };
+		7B0157A91BE81384001DEB37 /* GenericModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B0157A81BE81384001DEB37 /* GenericModel.m */; };
+		7B0157AD1BE813E0001DEB37 /* Validator.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B0157AC1BE813E0001DEB37 /* Validator.m */; };
 		7B406FA51BE7D8A900CC1B43 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B406FA41BE7D8A900CC1B43 /* AppDelegate.m */; };
 		7B406FA81BE7D8B900CC1B43 /* ProductsCatalogViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B406FA71BE7D8B900CC1B43 /* ProductsCatalogViewController.m */; };
 		7B90264B1BE7D13800728508 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B90264A1BE7D13800728508 /* main.m */; };
@@ -54,6 +57,12 @@
 		7B01579D1BE80791001DEB37 /* JWNetAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JWNetAPIClient.m; path = Util/JWNetAPIClient.m; sourceTree = "<group>"; };
 		7B01579F1BE8079B001DEB37 /* Routes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Routes.h; path = Util/Routes.h; sourceTree = "<group>"; };
 		7B0157A01BE8079B001DEB37 /* Routes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Routes.m; path = Util/Routes.m; sourceTree = "<group>"; };
+		7B0157A41BE81331001DEB37 /* ProductModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProductModel.h; path = Model/ProductModel.h; sourceTree = "<group>"; };
+		7B0157A51BE81331001DEB37 /* ProductModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProductModel.m; path = Model/ProductModel.m; sourceTree = "<group>"; };
+		7B0157A71BE81384001DEB37 /* GenericModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GenericModel.h; path = Model/GenericModel.h; sourceTree = "<group>"; };
+		7B0157A81BE81384001DEB37 /* GenericModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GenericModel.m; path = Model/GenericModel.m; sourceTree = "<group>"; };
+		7B0157AB1BE813E0001DEB37 /* Validator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Validator.h; path = Util/Validator.h; sourceTree = "<group>"; };
+		7B0157AC1BE813E0001DEB37 /* Validator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Validator.m; path = Util/Validator.m; sourceTree = "<group>"; };
 		7B406FA31BE7D8A900CC1B43 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = AppDelegate/AppDelegate.h; sourceTree = "<group>"; };
 		7B406FA41BE7D8A900CC1B43 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = AppDelegate/AppDelegate.m; sourceTree = "<group>"; };
 		7B406FA61BE7D8B900CC1B43 /* ProductsCatalogViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProductsCatalogViewController.h; path = Controller/ProductsCatalogViewController.h; sourceTree = "<group>"; };
@@ -119,13 +128,50 @@
 			name = ProductsCatalogViewController;
 			sourceTree = "<group>";
 		};
+		7B0157A31BE812F8001DEB37 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7B0157AE1BE81444001DEB37 /* GenericModel */,
+				7B0157AF1BE81450001DEB37 /* ProductModel */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		7B0157AA1BE813C5001DEB37 /* Validator */ = {
+			isa = PBXGroup;
+			children = (
+				7B0157AB1BE813E0001DEB37 /* Validator.h */,
+				7B0157AC1BE813E0001DEB37 /* Validator.m */,
+			);
+			name = Validator;
+			sourceTree = "<group>";
+		};
+		7B0157AE1BE81444001DEB37 /* GenericModel */ = {
+			isa = PBXGroup;
+			children = (
+				7B0157A71BE81384001DEB37 /* GenericModel.h */,
+				7B0157A81BE81384001DEB37 /* GenericModel.m */,
+			);
+			name = GenericModel;
+			sourceTree = "<group>";
+		};
+		7B0157AF1BE81450001DEB37 /* ProductModel */ = {
+			isa = PBXGroup;
+			children = (
+				7B0157A41BE81331001DEB37 /* ProductModel.h */,
+				7B0157A51BE81331001DEB37 /* ProductModel.m */,
+			);
+			name = ProductModel;
+			sourceTree = "<group>";
+		};
 		7B406FA21BE7D87B00CC1B43 /* Util */ = {
 			isa = PBXGroup;
 			children = (
-				7B406FBA1BE7DAE500CC1B43 /* Constants */,
 				7B406FB11BE7D9E500CC1B43 /* Connection */,
+				7B406FBA1BE7DAE500CC1B43 /* Constants */,
 				7B406FAC1BE7D92800CC1B43 /* JWNetAPIClient */,
 				7B406FAD1BE7D98000CC1B43 /* Routes */,
+				7B0157AA1BE813C5001DEB37 /* Validator */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -218,6 +264,7 @@
 		7B9026481BE7D13800728508 /* Dafiti-ObjC */ = {
 			isa = PBXGroup;
 			children = (
+				7B0157A31BE812F8001DEB37 /* Model */,
 				7B90267C1BE7D13F00728508 /* AppDelegate */,
 				7B9026801BE7D17500728508 /* Assets */,
 				7B90267D1BE7D14B00728508 /* Controller */,
@@ -488,12 +535,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B406FA51BE7D8A900CC1B43 /* AppDelegate.m in Sources */,
+				7B0157A91BE81384001DEB37 /* GenericModel.m in Sources */,
 				7B0157951BE80760001DEB37 /* ProductService.m in Sources */,
 				7B01579E1BE80791001DEB37 /* JWNetAPIClient.m in Sources */,
+				7B0157AD1BE813E0001DEB37 /* Validator.m in Sources */,
 				7B0157981BE8077B001DEB37 /* Constants.m in Sources */,
 				7B406FA81BE7D8B900CC1B43 /* ProductsCatalogViewController.m in Sources */,
 				7B90264B1BE7D13800728508 /* main.m in Sources */,
 				7B0157A11BE8079B001DEB37 /* Routes.m in Sources */,
+				7B0157A61BE81331001DEB37 /* ProductModel.m in Sources */,
 				7B0157921BE80754001DEB37 /* GenericService.m in Sources */,
 				7B01579B1BE80786001DEB37 /* Connection.m in Sources */,
 			);
