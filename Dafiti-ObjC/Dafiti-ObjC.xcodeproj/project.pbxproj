@@ -259,8 +259,8 @@
 		7B406FB51BE7DAA000CC1B43 /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				7BBC2A9E1BE8284C00CBF2BD /* ImageService */,
 				7B406FB61BE7DAA700CC1B43 /* GenericService */,
+				7BBC2A9E1BE8284C00CBF2BD /* ImageService */,
 				7B406FBE1BE7DB6800CC1B43 /* ProductService */,
 			);
 			name = Service;

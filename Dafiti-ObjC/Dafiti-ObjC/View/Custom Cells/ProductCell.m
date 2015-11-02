@@ -8,6 +8,9 @@
 
 #import "ProductCell.h"
 
+// Service
+#import "ImageService.h"
+
 @interface ProductCell()
 
 @property(weak,nonatomic) IBOutlet UIImageView *photo;
@@ -33,13 +36,15 @@
                                product:(ProductModel *)product {
     
     ProductCell *cell = [tableView dequeueReusableCellWithIdentifier:kNibNameProductCell forIndexPath:indexPath];
-    [self configureProductCell:cell product:product];
+    [self configureProductCell:cell tableView:tableView indexPath:indexPath product:product];
     
     return cell;
     
 }
 
 -(void)configureProductCell:(ProductCell *)cell
+                  tableView:(UITableView *)tableView
+                  indexPath:(NSIndexPath *)indexPath
                     product:(ProductModel *)product {
     
     if ( product == nil ) {
@@ -54,7 +59,43 @@
     cell.manufacturer.text = product.manufacturer;
     cell.price.text = [NSString stringWithFormat:@"$ %.2f", [product.salePrice doubleValue]];
     
+    [cell defineUserPhotoWithProduct:product tableView:tableView indexPath:indexPath cell:cell];
+    
 }
 
+#pragma mark - Private methods
+
+-(void)defineUserPhotoWithProduct:(ProductModel *)product
+                      tableView:(UITableView *)tableView
+                      indexPath:(NSIndexPath *)indexPath
+                      cell:(ProductCell *)cell {
+    
+    if ( product.image ) {
+        
+        cell.photo.image = [UIImage imageWithData:product.image];
+        return ;
+        
+    }
+    
+    cell.photo.image = nil;
+    
+    [[ImageService new] imageByUrl:product.imageUrl completion:^(UIImage *image) {
+        
+        ProductCell *helperCell = (ProductCell *)[tableView cellForRowAtIndexPath:indexPath];
+        
+        if ( helperCell ) {
+            
+            if ( image ) {
+                
+                product.image = UIImageJPEGRepresentation(image, 1.0);
+                helperCell.photo.image = image;
+                
+            }
+            
+        }
+        
+    }];
+    
+}
 
 @end

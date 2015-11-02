@@ -18,6 +18,8 @@
                                product:(ProductModel *)product;
 
 -(void)configureProductCell:(ProductCell *)cell
+                  tableView:(UITableView *)tableView
+                  indexPath:(NSIndexPath *)indexPath
                     product:(ProductModel *)product;
 
 @end
