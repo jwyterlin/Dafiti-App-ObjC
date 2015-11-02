@@ -52,6 +52,10 @@
 
 #pragma mark - UITableViewDelegate methods
 
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 105.0;
+}
+
 #pragma makr - Private methods
 
 -(void)downloadProducts {
