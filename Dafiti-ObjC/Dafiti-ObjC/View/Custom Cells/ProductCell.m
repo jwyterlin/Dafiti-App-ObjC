@@ -51,6 +51,8 @@
     }
     
     cell.name.text = product.name;
+    cell.manufacturer.text = product.manufacturer;
+    cell.price.text = [NSString stringWithFormat:@"$ %.2f", [product.salePrice doubleValue]];
     
 }
 

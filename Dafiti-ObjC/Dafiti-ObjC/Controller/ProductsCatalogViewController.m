@@ -29,25 +29,7 @@
     
     [super viewDidLoad];
     
-    NSNumber *page = [NSNumber numberWithInt:1];
-    NSNumber *limit = [NSNumber numberWithInt:15];
-    
-    [[ProductService new] productsListWithTerm:@"MacBook" page:page limit:limit completion:^(NSArray *products, BOOL hasNoConnection, NSError *error) {
-        
-        if ( hasNoConnection ) {
-            // TODO: Show alert no connection
-            return;
-        }
-        
-        if ( error ) {
-            // TODO: Show alert error
-            return;
-        }
-        
-        [self.products addObjectsFromArray:products];
-        [self.tableView reloadData];
-        
-    }];
+    [self downloadProducts];
     
 }
 
@@ -69,6 +51,32 @@
 }
 
 #pragma mark - UITableViewDelegate methods
+
+#pragma makr - Private methods
+
+-(void)downloadProducts {
+    
+    NSNumber *page = [NSNumber numberWithInt:1];
+    NSNumber *limit = [NSNumber numberWithInt:15];
+    
+    [[ProductService new] productsListWithTerm:@"MacBook" page:page limit:limit completion:^(NSArray *products, BOOL hasNoConnection, NSError *error) {
+        
+        if ( hasNoConnection ) {
+            // TODO: Show alert no connection
+            return;
+        }
+        
+        if ( error ) {
+            // TODO: Show alert error
+            return;
+        }
+        
+        [self.products addObjectsFromArray:products];
+        [self.tableView reloadData];
+        
+    }];
+    
+}
 
 #pragma mark - Lazy instances
 
