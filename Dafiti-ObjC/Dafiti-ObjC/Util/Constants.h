@@ -10,20 +10,20 @@
 
 @interface Constants : NSObject
 
-extern NSString *const kPipe;
-extern NSString *const kBestBuyAPIKey;
 extern NSString *const kAppDomain;
+extern NSString *const kBestBuyAPIKey;
+extern NSString *const kPipe;
 
 // Parameter Names
-extern NSString *const kParameterName;
-extern NSString *const kParameterShow;
-extern NSString *const kParameterPageSize;
-extern NSString *const kParameterPage;
-extern NSString *const kParameterLongDescription;
-extern NSString *const kParameterManufacturer;
-extern NSString *const kParameterSalePrice;
 extern NSString *const kParameterImage;
 extern NSString *const kParameterLargeFrontImage;
-
+extern NSString *const kParameterLongDescription;
+extern NSString *const kParameterManufacturer;
+extern NSString *const kParameterName;
+extern NSString *const kParameterPage;
+extern NSString *const kParameterPageSize;
+extern NSString *const kParameterProducts;
+extern NSString *const kParameterSalePrice;
+extern NSString *const kParameterShow;
 
 @end

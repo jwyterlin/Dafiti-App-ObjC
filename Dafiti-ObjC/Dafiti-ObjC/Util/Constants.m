@@ -10,19 +10,20 @@
 
 @implementation Constants
 
-NSString *const kPipe = @"%7C";
-NSString *const kBestBuyAPIKey = @"zcec37d2wj2g53ksuzgncs2c";
 NSString *const kAppDomain = @"Dafiti-ObjC";
+NSString *const kBestBuyAPIKey = @"zcec37d2wj2g53ksuzgncs2c";
+NSString *const kPipe = @"%7C";
 
 // Parameter Names
-NSString *const kParameterName = @"name";
-NSString *const kParameterShow = @"show";
-NSString *const kParameterPageSize = @"pageSize";
-NSString *const kParameterPage = @"page";
-NSString *const kParameterLongDescription = @"longDescription";
-NSString *const kParameterManufacturer = @"manufacturer";
-NSString *const kParameterSalePrice = @"salePrice";
 NSString *const kParameterImage = @"image";
 NSString *const kParameterLargeFrontImage = @"largeFrontImage";
+NSString *const kParameterLongDescription = @"longDescription";
+NSString *const kParameterManufacturer = @"manufacturer";
+NSString *const kParameterName = @"name";
+NSString *const kParameterPage = @"page";
+NSString *const kParameterPageSize = @"pageSize";
+NSString *const kParameterProducts = @"products";
+NSString *const kParameterSalePrice = @"salePrice";
+NSString *const kParameterShow = @"show";
 
 @end

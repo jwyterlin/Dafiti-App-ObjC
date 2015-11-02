@@ -8,7 +8,8 @@
 
 #import "ProductService.h"
 
-#import "AFHTTPSessionManager.h"
+// Model
+#import "ProductModel.h"
 
 @implementation ProductService
 
@@ -79,12 +80,12 @@
     NSString *url = [NSString stringWithFormat:@"%@%@",[Routes WS_PRODUCTS],query];
     
     NSArray *show = @[
-                      @"name",
-                      @"longDescription",
-                      @"manufacturer",
-                      @"salePrice",
-                      @"image",
-                      @"largeFrontImage"
+                      kParameterName,
+                      kParameterLongDescription,
+                      kParameterManufacturer,
+                      kParameterSalePrice,
+                      kParameterImage,
+                      kParameterLargeFrontImage
                      ];
     
     NSDictionary *parameters = @{
@@ -100,8 +101,12 @@
         
         NSDictionary *result = (NSDictionary *)responseData;
         
+        NSArray *products = result[kParameterProducts];
+        
+        NSArray *list = [[ProductModel new] setupListWithJson:products];
+        
         if (completion)
-            completion(nil,NO,nil);
+            completion(list,NO,nil);
         
     } failure:^(BOOL hasNoConnection, NSError *error) {
         
