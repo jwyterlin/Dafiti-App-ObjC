@@ -10,7 +10,9 @@
 
 #import "ProductService.h"
 
-@interface ProductsCatalogViewController ()
+@interface ProductsCatalogViewController()<UITableViewDataSource,UITableViewDelegate>
+
+@property(weak,nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
@@ -34,5 +36,17 @@
 -(void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
+
+#pragma mark - UITableViewDataSource methods
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 1;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return [UITableViewCell new];
+}
+
+#pragma mark - UITableViewDelegate methods
 
 @end
