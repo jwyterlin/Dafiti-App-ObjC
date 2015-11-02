@@ -29,6 +29,8 @@
     
     [super viewDidLoad];
     
+    self.navigationItem.title = @"Products";
+    
     [self downloadProducts];
     
 }
@@ -56,7 +58,7 @@
     return 105.0;
 }
 
-#pragma makr - Private methods
+#pragma mark - Private methods
 
 -(void)downloadProducts {
     
