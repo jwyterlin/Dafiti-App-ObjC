@@ -1,15 +1,13 @@
 //
-//  ProductsCatalogViewController.h
+//  GenericViewController.h
 //  Dafiti-ObjC
 //
 //  Created by Jhonathan Wyterlin on 02/11/15.
 //  Copyright © 2015 Jhonathan Wyterlin. All rights reserved.
 //
 
-#import "GenericViewController.h"
+#import <UIKit/UIKit.h>
 
-@interface ProductsCatalogViewController : GenericViewController
-
+@interface GenericViewController : UIViewController
 
 @end
-

@@ -28,6 +28,7 @@
 		7B9026641BE7D13800728508 /* Dafiti_ObjCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B9026631BE7D13800728508 /* Dafiti_ObjCTests.m */; };
 		7B90266F1BE7D13800728508 /* Dafiti_ObjCUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B90266E1BE7D13800728508 /* Dafiti_ObjCUITests.m */; };
 		7BBC2A901BE821F500CBF2BD /* Alert.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BBC2A8F1BE821F500CBF2BD /* Alert.m */; };
+		7BBC2A941BE8227E00CBF2BD /* GenericViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BBC2A931BE8227E00CBF2BD /* GenericViewController.m */; };
 		873CD34F871FEA77E5268A63 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EF87AB76D7749EC36DD95C0C /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -90,6 +91,8 @@
 		7B9026701BE7D13800728508 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7BBC2A8E1BE821F500CBF2BD /* Alert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Alert.h; path = Util/Alert.h; sourceTree = "<group>"; };
 		7BBC2A8F1BE821F500CBF2BD /* Alert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Alert.m; path = Util/Alert.m; sourceTree = "<group>"; };
+		7BBC2A921BE8227E00CBF2BD /* GenericViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GenericViewController.h; path = Controller/GenericViewController.h; sourceTree = "<group>"; };
+		7BBC2A931BE8227E00CBF2BD /* GenericViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GenericViewController.m; path = Controller/GenericViewController.m; sourceTree = "<group>"; };
 		C2410786DA854FAD339AC95D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		CD22A6A18EDA6F0C2BBBCAE6 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		EF87AB76D7749EC36DD95C0C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -355,6 +358,7 @@
 		7B90267D1BE7D14B00728508 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				7BBC2A911BE8226600CBF2BD /* GenericViewController */,
 				7B0157A21BE809CF001DEB37 /* ProductsCatalogViewController */,
 			);
 			name = Controller;
@@ -393,6 +397,15 @@
 				7BBC2A8F1BE821F500CBF2BD /* Alert.m */,
 			);
 			name = Alert;
+			sourceTree = "<group>";
+		};
+		7BBC2A911BE8226600CBF2BD /* GenericViewController */ = {
+			isa = PBXGroup;
+			children = (
+				7BBC2A921BE8227E00CBF2BD /* GenericViewController.h */,
+				7BBC2A931BE8227E00CBF2BD /* GenericViewController.m */,
+			);
+			name = GenericViewController;
 			sourceTree = "<group>";
 		};
 		C608F47EA8B68C6E5A98FCDB /* Frameworks */ = {
@@ -599,6 +612,7 @@
 				7B0157A11BE8079B001DEB37 /* Routes.m in Sources */,
 				7B0157A61BE81331001DEB37 /* ProductModel.m in Sources */,
 				7B0157921BE80754001DEB37 /* GenericService.m in Sources */,
+				7BBC2A941BE8227E00CBF2BD /* GenericViewController.m in Sources */,
 				7B01579B1BE80786001DEB37 /* Connection.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
