@@ -24,7 +24,7 @@ PODS:
   - Reachability (3.2)
 
 DEPENDENCIES:
-  - AFNetworking (= 2.6.0)
+  - AFNetworking
   - MBProgressHUD (~> 0.9)
   - Reachability (~> 3.2)
 
@@ -33,4 +33,4 @@ SPEC CHECKSUMS:
   MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
 
-COCOAPODS: 0.38.2
+COCOAPODS: 0.39.0

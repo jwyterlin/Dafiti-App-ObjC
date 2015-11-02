@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B0157921BE80754001DEB37 /* GenericService.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B0157911BE80754001DEB37 /* GenericService.m */; };
+		7B0157951BE80760001DEB37 /* ProductService.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B0157941BE80760001DEB37 /* ProductService.m */; };
+		7B0157981BE8077B001DEB37 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B0157971BE8077B001DEB37 /* Constants.m */; };
+		7B01579B1BE80786001DEB37 /* Connection.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B01579A1BE80786001DEB37 /* Connection.m */; };
+		7B01579E1BE80791001DEB37 /* JWNetAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B01579D1BE80791001DEB37 /* JWNetAPIClient.m */; };
+		7B0157A11BE8079B001DEB37 /* Routes.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B0157A01BE8079B001DEB37 /* Routes.m */; };
 		7B406FA51BE7D8A900CC1B43 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B406FA41BE7D8A900CC1B43 /* AppDelegate.m */; };
-		7B406FA81BE7D8B900CC1B43 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B406FA71BE7D8B900CC1B43 /* ViewController.m */; };
-		7B406FAB1BE7D92400CC1B43 /* JWNetAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B406FAA1BE7D92400CC1B43 /* JWNetAPIClient.m */; };
-		7B406FB01BE7D98E00CC1B43 /* Routes.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B406FAF1BE7D98E00CC1B43 /* Routes.m */; };
-		7B406FB41BE7D9F600CC1B43 /* Connection.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B406FB31BE7D9F600CC1B43 /* Connection.m */; };
-		7B406FB91BE7DAB900CC1B43 /* GenericDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B406FB81BE7DAB900CC1B43 /* GenericDAO.m */; };
-		7B406FBD1BE7DAF400CC1B43 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B406FBC1BE7DAF400CC1B43 /* Constants.m */; };
+		7B406FA81BE7D8B900CC1B43 /* ProductsCatalogViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B406FA71BE7D8B900CC1B43 /* ProductsCatalogViewController.m */; };
 		7B90264B1BE7D13800728508 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B90264A1BE7D13800728508 /* main.m */; };
 		7B9026541BE7D13800728508 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B9026521BE7D13800728508 /* Main.storyboard */; };
 		7B9026561BE7D13800728508 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B9026551BE7D13800728508 /* Assets.xcassets */; };
@@ -41,20 +42,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7B0157901BE80754001DEB37 /* GenericService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GenericService.h; path = Service/GenericService.h; sourceTree = "<group>"; };
+		7B0157911BE80754001DEB37 /* GenericService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GenericService.m; path = Service/GenericService.m; sourceTree = "<group>"; };
+		7B0157931BE80760001DEB37 /* ProductService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProductService.h; path = Service/ProductService.h; sourceTree = "<group>"; };
+		7B0157941BE80760001DEB37 /* ProductService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProductService.m; path = Service/ProductService.m; sourceTree = "<group>"; };
+		7B0157961BE8077B001DEB37 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = Util/Constants.h; sourceTree = "<group>"; };
+		7B0157971BE8077B001DEB37 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Constants.m; path = Util/Constants.m; sourceTree = "<group>"; };
+		7B0157991BE80786001DEB37 /* Connection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Connection.h; path = Util/Connection.h; sourceTree = "<group>"; };
+		7B01579A1BE80786001DEB37 /* Connection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Connection.m; path = Util/Connection.m; sourceTree = "<group>"; };
+		7B01579C1BE80791001DEB37 /* JWNetAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JWNetAPIClient.h; path = Util/JWNetAPIClient.h; sourceTree = "<group>"; };
+		7B01579D1BE80791001DEB37 /* JWNetAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JWNetAPIClient.m; path = Util/JWNetAPIClient.m; sourceTree = "<group>"; };
+		7B01579F1BE8079B001DEB37 /* Routes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Routes.h; path = Util/Routes.h; sourceTree = "<group>"; };
+		7B0157A01BE8079B001DEB37 /* Routes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Routes.m; path = Util/Routes.m; sourceTree = "<group>"; };
 		7B406FA31BE7D8A900CC1B43 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = AppDelegate/AppDelegate.h; sourceTree = "<group>"; };
 		7B406FA41BE7D8A900CC1B43 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = AppDelegate/AppDelegate.m; sourceTree = "<group>"; };
-		7B406FA61BE7D8B900CC1B43 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = Controller/ViewController.h; sourceTree = "<group>"; };
-		7B406FA71BE7D8B900CC1B43 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = Controller/ViewController.m; sourceTree = "<group>"; };
-		7B406FA91BE7D92400CC1B43 /* JWNetAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JWNetAPIClient.h; path = "Service Layer/JWNetAPIClient.h"; sourceTree = "<group>"; };
-		7B406FAA1BE7D92400CC1B43 /* JWNetAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JWNetAPIClient.m; path = "Service Layer/JWNetAPIClient.m"; sourceTree = "<group>"; };
-		7B406FAE1BE7D98E00CC1B43 /* Routes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Routes.h; path = "Service Layer/Routes.h"; sourceTree = "<group>"; };
-		7B406FAF1BE7D98E00CC1B43 /* Routes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Routes.m; path = "Service Layer/Routes.m"; sourceTree = "<group>"; };
-		7B406FB21BE7D9F600CC1B43 /* Connection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Connection.h; path = "Service Layer/Connection.h"; sourceTree = "<group>"; };
-		7B406FB31BE7D9F600CC1B43 /* Connection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Connection.m; path = "Service Layer/Connection.m"; sourceTree = "<group>"; };
-		7B406FB71BE7DAB900CC1B43 /* GenericDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GenericDAO.h; path = DAO/GenericDAO.h; sourceTree = "<group>"; };
-		7B406FB81BE7DAB900CC1B43 /* GenericDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GenericDAO.m; path = DAO/GenericDAO.m; sourceTree = "<group>"; };
-		7B406FBB1BE7DAF400CC1B43 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = "Service Layer/Constants.h"; sourceTree = "<group>"; };
-		7B406FBC1BE7DAF400CC1B43 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Constants.m; path = "Service Layer/Constants.m"; sourceTree = "<group>"; };
+		7B406FA61BE7D8B900CC1B43 /* ProductsCatalogViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProductsCatalogViewController.h; path = Controller/ProductsCatalogViewController.h; sourceTree = "<group>"; };
+		7B406FA71BE7D8B900CC1B43 /* ProductsCatalogViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProductsCatalogViewController.m; path = Controller/ProductsCatalogViewController.m; sourceTree = "<group>"; };
 		7B9026461BE7D13800728508 /* Dafiti-ObjC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dafiti-ObjC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B90264A1BE7D13800728508 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7B9026531BE7D13800728508 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -107,7 +110,16 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		7B406FA21BE7D87B00CC1B43 /* Service Layer */ = {
+		7B0157A21BE809CF001DEB37 /* ProductsCatalogViewController */ = {
+			isa = PBXGroup;
+			children = (
+				7B406FA61BE7D8B900CC1B43 /* ProductsCatalogViewController.h */,
+				7B406FA71BE7D8B900CC1B43 /* ProductsCatalogViewController.m */,
+			);
+			name = ProductsCatalogViewController;
+			sourceTree = "<group>";
+		};
+		7B406FA21BE7D87B00CC1B43 /* Util */ = {
 			isa = PBXGroup;
 			children = (
 				7B406FBA1BE7DAE500CC1B43 /* Constants */,
@@ -115,14 +127,14 @@
 				7B406FAC1BE7D92800CC1B43 /* JWNetAPIClient */,
 				7B406FAD1BE7D98000CC1B43 /* Routes */,
 			);
-			name = "Service Layer";
+			name = Util;
 			sourceTree = "<group>";
 		};
 		7B406FAC1BE7D92800CC1B43 /* JWNetAPIClient */ = {
 			isa = PBXGroup;
 			children = (
-				7B406FA91BE7D92400CC1B43 /* JWNetAPIClient.h */,
-				7B406FAA1BE7D92400CC1B43 /* JWNetAPIClient.m */,
+				7B01579C1BE80791001DEB37 /* JWNetAPIClient.h */,
+				7B01579D1BE80791001DEB37 /* JWNetAPIClient.m */,
 			);
 			name = JWNetAPIClient;
 			sourceTree = "<group>";
@@ -130,8 +142,8 @@
 		7B406FAD1BE7D98000CC1B43 /* Routes */ = {
 			isa = PBXGroup;
 			children = (
-				7B406FAE1BE7D98E00CC1B43 /* Routes.h */,
-				7B406FAF1BE7D98E00CC1B43 /* Routes.m */,
+				7B01579F1BE8079B001DEB37 /* Routes.h */,
+				7B0157A01BE8079B001DEB37 /* Routes.m */,
 			);
 			name = Routes;
 			sourceTree = "<group>";
@@ -139,36 +151,46 @@
 		7B406FB11BE7D9E500CC1B43 /* Connection */ = {
 			isa = PBXGroup;
 			children = (
-				7B406FB21BE7D9F600CC1B43 /* Connection.h */,
-				7B406FB31BE7D9F600CC1B43 /* Connection.m */,
+				7B0157991BE80786001DEB37 /* Connection.h */,
+				7B01579A1BE80786001DEB37 /* Connection.m */,
 			);
 			name = Connection;
 			sourceTree = "<group>";
 		};
-		7B406FB51BE7DAA000CC1B43 /* DAO */ = {
+		7B406FB51BE7DAA000CC1B43 /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				7B406FB61BE7DAA700CC1B43 /* GenericDAO */,
+				7B406FB61BE7DAA700CC1B43 /* GenericService */,
+				7B406FBE1BE7DB6800CC1B43 /* ProductService */,
 			);
-			name = DAO;
+			name = Service;
 			sourceTree = "<group>";
 		};
-		7B406FB61BE7DAA700CC1B43 /* GenericDAO */ = {
+		7B406FB61BE7DAA700CC1B43 /* GenericService */ = {
 			isa = PBXGroup;
 			children = (
-				7B406FB71BE7DAB900CC1B43 /* GenericDAO.h */,
-				7B406FB81BE7DAB900CC1B43 /* GenericDAO.m */,
+				7B0157901BE80754001DEB37 /* GenericService.h */,
+				7B0157911BE80754001DEB37 /* GenericService.m */,
 			);
-			name = GenericDAO;
+			name = GenericService;
 			sourceTree = "<group>";
 		};
 		7B406FBA1BE7DAE500CC1B43 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
-				7B406FBB1BE7DAF400CC1B43 /* Constants.h */,
-				7B406FBC1BE7DAF400CC1B43 /* Constants.m */,
+				7B0157961BE8077B001DEB37 /* Constants.h */,
+				7B0157971BE8077B001DEB37 /* Constants.m */,
 			);
 			name = Constants;
+			sourceTree = "<group>";
+		};
+		7B406FBE1BE7DB6800CC1B43 /* ProductService */ = {
+			isa = PBXGroup;
+			children = (
+				7B0157931BE80760001DEB37 /* ProductService.h */,
+				7B0157941BE80760001DEB37 /* ProductService.m */,
+			);
+			name = ProductService;
 			sourceTree = "<group>";
 		};
 		7B90263D1BE7D13800728508 = {
@@ -196,12 +218,12 @@
 		7B9026481BE7D13800728508 /* Dafiti-ObjC */ = {
 			isa = PBXGroup;
 			children = (
-				7B406FB51BE7DAA000CC1B43 /* DAO */,
 				7B90267C1BE7D13F00728508 /* AppDelegate */,
 				7B9026801BE7D17500728508 /* Assets */,
 				7B90267D1BE7D14B00728508 /* Controller */,
-				7B406FA21BE7D87B00CC1B43 /* Service Layer */,
+				7B406FB51BE7DAA000CC1B43 /* Service */,
 				7B9026491BE7D13800728508 /* Supporting Files */,
+				7B406FA21BE7D87B00CC1B43 /* Util */,
 				7B90267F1BE7D16B00728508 /* View */,
 			);
 			path = "Dafiti-ObjC";
@@ -246,8 +268,7 @@
 		7B90267D1BE7D14B00728508 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				7B406FA61BE7D8B900CC1B43 /* ViewController.h */,
-				7B406FA71BE7D8B900CC1B43 /* ViewController.m */,
+				7B0157A21BE809CF001DEB37 /* ProductsCatalogViewController */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -297,6 +318,7 @@
 				7B9026431BE7D13800728508 /* Frameworks */,
 				7B9026441BE7D13800728508 /* Resources */,
 				F453C19E647D4AEE4BBC3CF1 /* Copy Pods Resources */,
+				1F12824E9345B767B20290B1 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -413,6 +435,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		1F12824E9345B767B20290B1 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		2A586B3DAAA0D190618E1350 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -450,14 +487,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B406FAB1BE7D92400CC1B43 /* JWNetAPIClient.m in Sources */,
 				7B406FA51BE7D8A900CC1B43 /* AppDelegate.m in Sources */,
-				7B406FB01BE7D98E00CC1B43 /* Routes.m in Sources */,
-				7B406FBD1BE7DAF400CC1B43 /* Constants.m in Sources */,
-				7B406FA81BE7D8B900CC1B43 /* ViewController.m in Sources */,
+				7B0157951BE80760001DEB37 /* ProductService.m in Sources */,
+				7B01579E1BE80791001DEB37 /* JWNetAPIClient.m in Sources */,
+				7B0157981BE8077B001DEB37 /* Constants.m in Sources */,
+				7B406FA81BE7D8B900CC1B43 /* ProductsCatalogViewController.m in Sources */,
 				7B90264B1BE7D13800728508 /* main.m in Sources */,
-				7B406FB91BE7DAB900CC1B43 /* GenericDAO.m in Sources */,
-				7B406FB41BE7D9F600CC1B43 /* Connection.m in Sources */,
+				7B0157A11BE8079B001DEB37 /* Routes.m in Sources */,
+				7B0157921BE80754001DEB37 /* GenericService.m in Sources */,
+				7B01579B1BE80786001DEB37 /* Connection.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -13,6 +13,6 @@
 +(NSString *)BASE_URL;
 +(NSString *)BASE_URL_API;
 
-+(NSString *)WS_TEST;
++(NSString *)WS_PRODUCTS;
 
 @end

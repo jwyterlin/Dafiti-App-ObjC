@@ -11,15 +11,15 @@
 @implementation Routes
 
 +(NSString *)BASE_URL {
-    return @"http://server.com/";
+    return @"http://api.bestbuy.com";
 }
 
 +(NSString *)BASE_URL_API {
-    return [NSString stringWithFormat:@"%@",[Routes BASE_URL]];
+    return [NSString stringWithFormat:@"%@/v1",[Routes BASE_URL]];
 }
 
-+(NSString *)WS_TEST {
-    return @"TEST";
++(NSString *)WS_PRODUCTS {
+    return @"products";
 }
 
 @end

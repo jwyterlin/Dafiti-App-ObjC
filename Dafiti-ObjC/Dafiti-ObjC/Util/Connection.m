@@ -7,6 +7,7 @@
 //
 
 #import "Connection.h"
+#import "Constants.h"
 #import "JWNetAPIClient.h"
 #import "Reachability.h"
 #import "Routes.h"
@@ -19,74 +20,6 @@
 @end
 
 @implementation Connection
-
--(void)connectWithParameters:(NSDictionary *)parameters
-                  completion:(void(^)(NSDictionary *response, BOOL hasNoConnection, NSError *error))completion {
-    
-    if ( ! [self isNetworkReachable] ) {
-        
-        if (completion)
-            completion(nil, YES, nil);
-        
-        return;
-        
-    }
-    
-    NSString *url = [self urlFromParameters:parameters];
-    
-    url = [NSString stringWithFormat:@"%@%@",[Routes BASE_URL_API],url];
-    
-    // Create the request.
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:url]];
-    
-    // Specify that it will be a GET request
-    request.HTTPMethod = @"GET";
-    
-    // Header fields
-    [request setValue:@"application/json; charset=utf-8" forHTTPHeaderField:@"Content-Type"];
-    [request setValue:@"application/json; charset=utf-8" forHTTPHeaderField:@"Accept"];
-    
-    // Create url connection and fire request
-    NSURLConnection *conn = [[NSURLConnection alloc] initWithRequest:request delegate:self];
-    
-    if (completion)
-        self.blockProperty = completion;
-    
-}
-
-#pragma mark NSURLConnection Delegate Methods
-
-- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
-    self.responseData = [NSMutableData new];
-}
-
--(void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
-    // Append the new data to the responseData
-    [self.responseData appendData:data];
-}
-
--(NSCachedURLResponse *)connection:(NSURLConnection *)connection
-                 willCacheResponse:(NSCachedURLResponse*)cachedResponse {
-    // Return nil to indicate not necessary to store a cached response for this connection
-    return nil;
-}
-
--(void)connectionDidFinishLoading:(NSURLConnection *)connection {
-    
-    NSError *jsonError;
-    NSDictionary *json = [NSJSONSerialization JSONObjectWithData:self.responseData
-                                                         options:NSJSONReadingMutableContainers
-                                                           error:&jsonError];
-    
-    self.blockProperty(json,NO,jsonError);
-    
-}
-
--(void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
-    self.blockProperty(nil,NO,error);
-}
-
-#pragma mark -
 
 // Complete request method to the WebService
 -(void)connectWithMethod:(RequestMethod)method
@@ -122,11 +55,13 @@
     }
     
     // Set RequestSerializer
-    if ( requestSerializer == RequestSerializerHTTP ) {
+    if ( requestSerializer == RequestSerializerHTTP )
         [[JWNetAPIClient sharedClient] setRequestSerializer:[AFHTTPRequestSerializer serializer]];
-    } else {
+    else
         [[JWNetAPIClient sharedClient] setRequestSerializer:[AFJSONRequestSerializer serializer]];
-    }
+    
+    parameters = [self addFixedParametersWithParameters:parameters];
+    
     
     if ( method == RequestMethodGet ) {
         
@@ -191,22 +126,19 @@
     
 }
 
--(NSString *)urlFromParameters:(NSDictionary *)parameters {
+-(NSDictionary *)addFixedParametersWithParameters:(NSDictionary *)parameters {
     
-    NSMutableString *url = [NSMutableString new];
+    NSMutableDictionary *params;
     
-    [url appendString:@"?"];
+    if ( parameters == nil )
+        params = [NSMutableDictionary new];
+    else
+        params = [[NSMutableDictionary alloc] initWithDictionary:parameters];
     
-    for ( NSString *key in parameters.allKeys ) {
-        [url appendFormat:@"%@", key];
-        [url appendString:@"="];
-        [url appendFormat:@"%@", parameters[key]];
-        [url appendString:@"&"];
-    }
+    [params setObject:kBestBuyAPIKey forKey:@"apiKey"];
+    [params setObject:@"json" forKey:@"format"];
     
-    NSString *urlConverted = [url substringWithRange:NSMakeRange(0, url.length-1)];
-    
-    return urlConverted;
+    return [params mutableCopy];
     
 }
 

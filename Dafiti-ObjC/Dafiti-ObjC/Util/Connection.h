@@ -22,9 +22,6 @@ typedef enum {
     RequestSerializerJSON,
 } RequestSerializer;
 
--(void)connectWithParameters:(NSDictionary *)parameters
-                  completion:(void(^)(NSDictionary *response, BOOL hasNoConnection, NSError *error))completion;
-
 // Complete request method to the WebService
 -(void)connectWithMethod:(RequestMethod)method
                      url:(NSString *)url

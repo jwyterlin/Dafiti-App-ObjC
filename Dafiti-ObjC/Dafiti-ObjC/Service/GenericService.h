@@ -1,5 +1,5 @@
 //
-//  GenericDAO.h
+//  GenericService.h
 //  Dafiti-ObjC
 //
 //  Created by Jhonathan Wyterlin on 02/11/15.
@@ -13,6 +13,9 @@
 #import "Constants.h"
 #import "Routes.h"
 
-@interface GenericDAO : NSObject
+@interface GenericService : NSObject
+
+-(NSString *)queryWithParameters:(NSDictionary *)parameters;
+-(NSString *)showParameters:(NSArray *)parameters;
 
 @end
