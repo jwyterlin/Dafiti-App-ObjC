@@ -63,7 +63,11 @@
     NSNumber *page = [NSNumber numberWithInt:1];
     NSNumber *limit = [NSNumber numberWithInt:15];
     
+    [[Indicator shared] showIndicatorWithLabel:@"Loading Products..." viewController:self];
+    
     [[ProductService new] productsListWithTerm:@"MacBook" page:page limit:limit completion:^(NSArray *products, BOOL hasNoConnection, NSError *error) {
+        
+        [[Indicator shared] stopIndicatorInViewController:self];
         
         if ( hasNoConnection ) {
             // TODO: Show alert no connection

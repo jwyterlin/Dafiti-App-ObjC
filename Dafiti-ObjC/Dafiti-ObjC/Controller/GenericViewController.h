@@ -10,6 +10,7 @@
 
 // Util
 #import "Alert.h"
+#import "Indicator.h"
 
 @interface GenericViewController : UIViewController
 
