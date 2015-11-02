@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+// Util
+#import "Alert.h"
+
 @interface GenericViewController : UIViewController
 
 @end
