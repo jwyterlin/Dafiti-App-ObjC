@@ -17,6 +17,8 @@
 		7B0157A91BE81384001DEB37 /* GenericModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B0157A81BE81384001DEB37 /* GenericModel.m */; };
 		7B0157AD1BE813E0001DEB37 /* Validator.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B0157AC1BE813E0001DEB37 /* Validator.m */; };
 		7B0157B51BE81A98001DEB37 /* GenericCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B0157B41BE81A98001DEB37 /* GenericCell.m */; };
+		7B0157B91BE81ACF001DEB37 /* ProductCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B0157B71BE81ACF001DEB37 /* ProductCell.m */; };
+		7B0157BA1BE81ACF001DEB37 /* ProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B0157B81BE81ACF001DEB37 /* ProductCell.xib */; };
 		7B406FA51BE7D8A900CC1B43 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B406FA41BE7D8A900CC1B43 /* AppDelegate.m */; };
 		7B406FA81BE7D8B900CC1B43 /* ProductsCatalogViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B406FA71BE7D8B900CC1B43 /* ProductsCatalogViewController.m */; };
 		7B90264B1BE7D13800728508 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B90264A1BE7D13800728508 /* main.m */; };
@@ -66,6 +68,9 @@
 		7B0157AC1BE813E0001DEB37 /* Validator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Validator.m; path = Util/Validator.m; sourceTree = "<group>"; };
 		7B0157B31BE81A98001DEB37 /* GenericCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GenericCell.h; path = "View/Custom Cells/GenericCell.h"; sourceTree = "<group>"; };
 		7B0157B41BE81A98001DEB37 /* GenericCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GenericCell.m; path = "View/Custom Cells/GenericCell.m"; sourceTree = "<group>"; };
+		7B0157B61BE81ACF001DEB37 /* ProductCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProductCell.h; path = "View/Custom Cells/ProductCell.h"; sourceTree = "<group>"; };
+		7B0157B71BE81ACF001DEB37 /* ProductCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProductCell.m; path = "View/Custom Cells/ProductCell.m"; sourceTree = "<group>"; };
+		7B0157B81BE81ACF001DEB37 /* ProductCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ProductCell.xib; path = "View/Custom Cells/ProductCell.xib"; sourceTree = "<group>"; };
 		7B406FA31BE7D8A900CC1B43 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = AppDelegate/AppDelegate.h; sourceTree = "<group>"; };
 		7B406FA41BE7D8A900CC1B43 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = AppDelegate/AppDelegate.m; sourceTree = "<group>"; };
 		7B406FA61BE7D8B900CC1B43 /* ProductsCatalogViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProductsCatalogViewController.h; path = Controller/ProductsCatalogViewController.h; sourceTree = "<group>"; };
@@ -179,6 +184,9 @@
 		7B0157B11BE81A58001DEB37 /* ProductCell */ = {
 			isa = PBXGroup;
 			children = (
+				7B0157B61BE81ACF001DEB37 /* ProductCell.h */,
+				7B0157B71BE81ACF001DEB37 /* ProductCell.m */,
+				7B0157B81BE81ACF001DEB37 /* ProductCell.xib */,
 			);
 			name = ProductCell;
 			sourceTree = "<group>";
@@ -489,6 +497,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B9026591BE7D13800728508 /* LaunchScreen.storyboard in Resources */,
+				7B0157BA1BE81ACF001DEB37 /* ProductCell.xib in Resources */,
 				7B9026561BE7D13800728508 /* Assets.xcassets in Resources */,
 				7B9026541BE7D13800728508 /* Main.storyboard in Resources */,
 			);
@@ -568,6 +577,7 @@
 				7B0157951BE80760001DEB37 /* ProductService.m in Sources */,
 				7B01579E1BE80791001DEB37 /* JWNetAPIClient.m in Sources */,
 				7B0157AD1BE813E0001DEB37 /* Validator.m in Sources */,
+				7B0157B91BE81ACF001DEB37 /* ProductCell.m in Sources */,
 				7B0157B51BE81A98001DEB37 /* GenericCell.m in Sources */,
 				7B0157981BE8077B001DEB37 /* Constants.m in Sources */,
 				7B406FA81BE7D8B900CC1B43 /* ProductsCatalogViewController.m in Sources */,
