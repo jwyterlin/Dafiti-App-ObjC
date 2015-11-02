@@ -26,4 +26,7 @@ extern NSString *const kParameterProducts;
 extern NSString *const kParameterSalePrice;
 extern NSString *const kParameterShow;
 
+// Cell Nib Names
+extern NSString *const kNibNameProductCell;
+
 @end

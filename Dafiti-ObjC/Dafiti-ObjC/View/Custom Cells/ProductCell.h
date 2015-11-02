@@ -8,6 +8,16 @@
 
 #import "GenericCell.h"
 
+// Model
+#import "ProductModel.h"
+
 @interface ProductCell : GenericCell
+
+-(ProductCell *)productCellAtIndexPath:(NSIndexPath *)indexPath
+                             tableView:(UITableView *)tableView
+                               product:(ProductModel *)product;
+
+-(void)configureProductCell:(ProductCell *)cell
+                    product:(ProductModel *)product;
 
 @end

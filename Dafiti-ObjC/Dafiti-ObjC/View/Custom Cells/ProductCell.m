@@ -26,4 +26,33 @@
     [super setSelected:selected animated:animated];
 }
 
+#pragma mark - Public methods
+
+-(ProductCell *)productCellAtIndexPath:(NSIndexPath *)indexPath
+                             tableView:(UITableView *)tableView
+                               product:(ProductModel *)product {
+    
+    ProductCell *cell = [tableView dequeueReusableCellWithIdentifier:kNibNameProductCell forIndexPath:indexPath];
+    [self configureProductCell:cell product:product];
+    
+    return cell;
+    
+}
+
+-(void)configureProductCell:(ProductCell *)cell
+                    product:(ProductModel *)product {
+    
+    if ( product == nil ) {
+        
+        cell.name.text = @"";
+        
+        return;
+        
+    }
+    
+    cell.name.text = product.name;
+    
+}
+
+
 @end

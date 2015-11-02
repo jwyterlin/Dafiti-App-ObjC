@@ -8,11 +8,16 @@
 
 #import "ProductsCatalogViewController.h"
 
+// Service
 #import "ProductService.h"
+
+// Custom Cells
+#import "ProductCell.h"
 
 @interface ProductsCatalogViewController()<UITableViewDataSource,UITableViewDelegate>
 
 @property(weak,nonatomic) IBOutlet UITableView *tableView;
+@property(strong,nonatomic) NSMutableArray *products;
 
 @end
 
@@ -29,6 +34,19 @@
     
     [[ProductService new] productsListWithTerm:@"MacBook" page:page limit:limit completion:^(NSArray *products, BOOL hasNoConnection, NSError *error) {
         
+        if ( hasNoConnection ) {
+            // TODO: Show alert no connection
+            return;
+        }
+        
+        if ( error ) {
+            // TODO: Show alert error
+            return;
+        }
+        
+        [self.products addObjectsFromArray:products];
+        [self.tableView reloadData];
+        
     }];
     
 }
@@ -40,13 +58,26 @@
 #pragma mark - UITableViewDataSource methods
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 1;
+    return self.products.count;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return [UITableViewCell new];
+    
+    ProductModel *product = self.products[indexPath.row];
+    return [[ProductCell new] productCellAtIndexPath:indexPath tableView:tableView product:product];
+    
 }
 
 #pragma mark - UITableViewDelegate methods
+
+#pragma mark - Lazy instances
+
+-(NSMutableArray *)products {
+    
+    if ( ! _products )
+        _products = [NSMutableArray new];
+    return _products;
+    
+}
 
 @end
