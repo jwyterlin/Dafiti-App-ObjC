@@ -27,6 +27,7 @@
 		7B9026591BE7D13800728508 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B9026571BE7D13800728508 /* LaunchScreen.storyboard */; };
 		7B9026641BE7D13800728508 /* Dafiti_ObjCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B9026631BE7D13800728508 /* Dafiti_ObjCTests.m */; };
 		7B90266F1BE7D13800728508 /* Dafiti_ObjCUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B90266E1BE7D13800728508 /* Dafiti_ObjCUITests.m */; };
+		7BBC2A901BE821F500CBF2BD /* Alert.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BBC2A8F1BE821F500CBF2BD /* Alert.m */; };
 		873CD34F871FEA77E5268A63 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EF87AB76D7749EC36DD95C0C /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -87,6 +88,8 @@
 		7B90266A1BE7D13800728508 /* Dafiti-ObjCUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Dafiti-ObjCUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B90266E1BE7D13800728508 /* Dafiti_ObjCUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Dafiti_ObjCUITests.m; sourceTree = "<group>"; };
 		7B9026701BE7D13800728508 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7BBC2A8E1BE821F500CBF2BD /* Alert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Alert.h; path = Util/Alert.h; sourceTree = "<group>"; };
+		7BBC2A8F1BE821F500CBF2BD /* Alert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Alert.m; path = Util/Alert.m; sourceTree = "<group>"; };
 		C2410786DA854FAD339AC95D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		CD22A6A18EDA6F0C2BBBCAE6 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		EF87AB76D7749EC36DD95C0C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -203,6 +206,7 @@
 		7B406FA21BE7D87B00CC1B43 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				7BBC2A8D1BE821E100CBF2BD /* Alert */,
 				7B406FB11BE7D9E500CC1B43 /* Connection */,
 				7B406FBA1BE7DAE500CC1B43 /* Constants */,
 				7B406FAC1BE7D92800CC1B43 /* JWNetAPIClient */,
@@ -380,6 +384,15 @@
 				7B9026551BE7D13800728508 /* Assets.xcassets */,
 			);
 			name = Assets;
+			sourceTree = "<group>";
+		};
+		7BBC2A8D1BE821E100CBF2BD /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				7BBC2A8E1BE821F500CBF2BD /* Alert.h */,
+				7BBC2A8F1BE821F500CBF2BD /* Alert.m */,
+			);
+			name = Alert;
 			sourceTree = "<group>";
 		};
 		C608F47EA8B68C6E5A98FCDB /* Frameworks */ = {
@@ -578,6 +591,7 @@
 				7B01579E1BE80791001DEB37 /* JWNetAPIClient.m in Sources */,
 				7B0157AD1BE813E0001DEB37 /* Validator.m in Sources */,
 				7B0157B91BE81ACF001DEB37 /* ProductCell.m in Sources */,
+				7BBC2A901BE821F500CBF2BD /* Alert.m in Sources */,
 				7B0157B51BE81A98001DEB37 /* GenericCell.m in Sources */,
 				7B0157981BE8077B001DEB37 /* Constants.m in Sources */,
 				7B406FA81BE7D8B900CC1B43 /* ProductsCatalogViewController.m in Sources */,
