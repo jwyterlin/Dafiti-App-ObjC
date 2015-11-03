@@ -14,8 +14,8 @@
 @interface ProductCell()
 
 @property(weak,nonatomic) IBOutlet UIImageView *photo;
-@property(weak,nonatomic) IBOutlet UILabel *name;
-@property(weak,nonatomic) IBOutlet UILabel *manufacturer;
+@property(weak,nonatomic) IBOutlet CellLabel *name;
+@property(weak,nonatomic) IBOutlet CellLabel *manufacturer;
 @property(weak,nonatomic) IBOutlet UILabel *price;
 
 @property(weak,nonatomic) IBOutlet NSLayoutConstraint *nameWidth;

@@ -22,7 +22,7 @@
                             <constraint firstAttribute="height" constant="54" id="Uqb-WG-01a"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="180" translatesAutoresizingMaskIntoConstraints="NO" id="4hs-4T-MtF">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="180" translatesAutoresizingMaskIntoConstraints="NO" id="4hs-4T-MtF" customClass="CellLabel">
                         <rect key="frame" x="132" y="8" width="180" height="21"/>
                         <animations/>
                         <constraints>
@@ -32,14 +32,14 @@
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Manufacturer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="180" translatesAutoresizingMaskIntoConstraints="NO" id="A8i-v8-ty8">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Manufacturer" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="180" translatesAutoresizingMaskIntoConstraints="NO" id="A8i-v8-ty8" customClass="CellLabel">
                         <rect key="frame" x="132" y="37" width="180" height="21"/>
                         <animations/>
                         <constraints>
                             <constraint firstAttribute="width" constant="180" id="COA-00-jRy"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="180" translatesAutoresizingMaskIntoConstraints="NO" id="IfH-PA-kQ0">
@@ -48,7 +48,7 @@
                         <constraints>
                             <constraint firstAttribute="width" constant="180" id="qFy-bI-xR6"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -81,9 +81,9 @@
             </tableViewCellContentView>
             <animations/>
             <connections>
-                <outlet property="manufacturer" destination="A8i-v8-ty8" id="DPn-kn-rm3"/>
+                <outlet property="manufacturer" destination="A8i-v8-ty8" id="ySR-gU-zjr"/>
                 <outlet property="manufacturerWidth" destination="COA-00-jRy" id="MbU-u1-Hmm"/>
-                <outlet property="name" destination="4hs-4T-MtF" id="jUe-qc-nvk"/>
+                <outlet property="name" destination="4hs-4T-MtF" id="Kph-93-VaM"/>
                 <outlet property="nameWidth" destination="bgP-In-2PC" id="fq7-Ah-b5G"/>
                 <outlet property="photo" destination="u71-QM-eoA" id="6ee-l2-2Ff"/>
                 <outlet property="price" destination="IfH-PA-kQ0" id="yyy-2c-6dE"/>

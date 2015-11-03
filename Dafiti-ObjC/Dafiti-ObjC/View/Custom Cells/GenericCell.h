@@ -11,6 +11,9 @@
 // Categories
 #import "UIView+Helper.h"
 
+// Custom Labels
+#import "CellLabel.h"
+
 @interface GenericCell : UITableViewCell
 
 @end
