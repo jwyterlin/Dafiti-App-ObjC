@@ -17,7 +17,10 @@
 // Categories
 #import "UITableView+Helper.h"
 
-@interface ProductsCatalogViewController()<UITableViewDataSource,UITableViewDelegate>
+// Util
+#import "CellHelper.h"
+
+@interface ProductsCatalogViewController()<UITableViewDataSource,UITableViewDelegate,CellHelperDelegate>
 
 @property(weak,nonatomic) IBOutlet UITableView *tableView;
 @property(strong,nonatomic) NSMutableArray *products;
@@ -69,7 +72,22 @@
 #pragma mark - UITableViewDelegate methods
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 105.0;
+    
+    CGFloat height = [[CellHelper new] heightForCellAtIndexPath:indexPath tableView:tableView cellIdentifier:kNibNameProductCell delegate:self];
+    return height;
+    
+}
+
+#pragma mark - CellHelperDelegate Methods
+
+-(void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
+    
+    ProductCell *customCell = (ProductCell *)cell;
+    
+    ProductModel *product = self.products[indexPath.row];
+    
+    [customCell configureProductCell:customCell tableView:self.tableView indexPath:indexPath product:product];
+    
 }
 
 #pragma mark - Private methods
