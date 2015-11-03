@@ -56,7 +56,7 @@
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.backgroundColor = [UIColor clearColor];
     
-    cell.image.image = [UIImage imageWithData:product.image];
+    [cell defineUserPhotoWithProduct:product tableView:tableView indexPath:indexPath cell:cell];
     
 }
 
@@ -74,13 +74,17 @@
         
     }
     
-    cell.image.image = nil;
+    if ( product.image )
+        cell.image.image = [UIImage imageWithData:product.image];
+    else
+        cell.image.image = nil;
     
     if ( [Validator isEmptyString:product.largeFrontImageUrl] )
         return;
     
-    [cell.loading startAnimating];
-    
+    if ( ! product.image )
+        [cell.loading startAnimating];
+
     [[ImageService new] imageByUrl:product.largeFrontImageUrl completion:^(UIImage *image) {
         
         [cell.loading stopAnimating];
