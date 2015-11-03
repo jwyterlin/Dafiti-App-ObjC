@@ -28,6 +28,7 @@
 @implementation ProductDetailViewController
 
 -(void)viewDidLoad {
+    
     [super viewDidLoad];
     
     self.navigationItem.title = @"Product Detail";
@@ -41,6 +42,14 @@
 
 -(void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+}
+
+-(void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
+    
+    [super viewWillTransitionToSize:size withTransitionCoordinator:coordinator];
+    
+    [self.tableView reloadData];
+    
 }
 
 #pragma mark - UITableViewDataSource methods
