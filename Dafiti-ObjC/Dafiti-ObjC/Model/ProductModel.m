@@ -31,6 +31,7 @@
     _salePrice = [NSNumber numberWithDouble:[json[kParameterSalePrice] doubleValue]];
     _imageUrl = json[kParameterImage];
     _largeFrontImageUrl = json[kParameterLargeFrontImage];
+    _url = json[kParameterUrl];
     
     return self;
     

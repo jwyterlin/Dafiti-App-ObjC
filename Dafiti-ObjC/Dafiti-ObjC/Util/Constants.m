@@ -25,6 +25,7 @@ NSString *const kParameterPageSize = @"pageSize";
 NSString *const kParameterProducts = @"products";
 NSString *const kParameterSalePrice = @"salePrice";
 NSString *const kParameterShow = @"show";
+NSString *const kParameterUrl = @"url";
 
 // Cell Nib Names
 NSString *const kNibNameProductCell = @"ProductCell";

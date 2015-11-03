@@ -43,9 +43,7 @@
 -(void)viewDidLoad {
     
     [super viewDidLoad];
-    
-    self.navigationItem.title = @"Products";
-    
+
     [self.tableView registerNibForCellReuseIdentifier:kNibNameProductCell];
     [self.tableView removeSeparator];
     [self.tableView addSubview:self.refresh];
@@ -53,6 +51,14 @@
     self.page = 1;
     
     [self downloadProducts];
+    
+}
+
+-(void)viewWillAppear:(BOOL)animated {
+    
+    [super viewWillAppear:animated];
+    
+    self.navigationItem.title = @"Products";
     
 }
 
@@ -111,6 +117,7 @@
     
     ProductDetailViewController *viewControllerToPresent = [storyboard instantiateViewControllerWithIdentifier:@"ProductDetailViewController"];
     viewControllerToPresent.product = product;
+    self.navigationItem.title = @"";
     
     [self.navigationController pushViewController:viewControllerToPresent animated:YES];
     

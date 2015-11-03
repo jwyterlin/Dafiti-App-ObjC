@@ -14,6 +14,7 @@
 @property(nonatomic,readonly) NSString *longDescription;
 @property(nonatomic,readonly) NSString *manufacturer;
 @property(nonatomic,readonly) NSNumber *salePrice;
+@property(nonatomic,readonly) NSString *url;
 @property(nonatomic,readonly) NSString *imageUrl;
 @property(nonatomic,strong) NSData *image;
 @property(nonatomic,readonly) NSString *largeFrontImageUrl;

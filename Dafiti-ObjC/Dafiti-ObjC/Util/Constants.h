@@ -25,6 +25,7 @@ extern NSString *const kParameterPageSize;
 extern NSString *const kParameterProducts;
 extern NSString *const kParameterSalePrice;
 extern NSString *const kParameterShow;
+extern NSString *const kParameterUrl;
 
 // Cell Nib Names
 extern NSString *const kNibNameProductCell;

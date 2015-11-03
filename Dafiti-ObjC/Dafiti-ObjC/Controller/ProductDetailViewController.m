@@ -10,6 +10,7 @@
 
 // Util
 #import "CellHelper.h"
+#import "Validator.h"
 
 // Custom Cells
 #import "ImageCell.h"
@@ -33,10 +34,9 @@
     
     self.navigationItem.title = @"Product Detail";
     
-    [self.tableView registerNibForCellReuseIdentifier:kNibNameProductNameCell];
-    [self.tableView registerNibForCellReuseIdentifier:kNibNameImageCell];
-    [self.tableView registerNibForCellReuseIdentifier:kNibNameProductInfoCell];
-    [self.tableView removeSeparator];
+    [self setupTableView];
+    
+    [self addShareButton];
     
 }
 
@@ -49,6 +49,14 @@
     [super viewWillTransitionToSize:size withTransitionCoordinator:coordinator];
     
     [self.tableView reloadData];
+    
+}
+
+#pragma mark - IBAction methods
+
+-(IBAction)shareButtonPressed:(id)sender {
+    
+    [self shareContent];
     
 }
 
@@ -108,5 +116,37 @@
     
 }
 
+#pragma mark - Private methods
+
+-(void)setupTableView {
+
+    [self.tableView registerNibForCellReuseIdentifier:kNibNameProductNameCell];
+    [self.tableView registerNibForCellReuseIdentifier:kNibNameImageCell];
+    [self.tableView registerNibForCellReuseIdentifier:kNibNameProductInfoCell];
+    [self.tableView removeSeparator];
+    
+}
+
+-(void)addShareButton {
+    
+    UIBarButtonItem *shareButton = [[UIBarButtonItem alloc] initWithTitle:@"Share"
+                                                                    style:UIBarButtonItemStyleDone
+                                                                   target:self
+                                                                   action:@selector(shareButtonPressed:)];
+    
+    self.navigationItem.rightBarButtonItem = shareButton;
+    
+}
+
+-(void)shareContent {
+    
+    NSString *message = [NSString stringWithFormat:@"I liked this: %@\n%@",self.product.name, [Validator isEmptyString:self.product.url]?@"":self.product.url];
+    NSArray *shareItems = @[message];
+    
+    UIActivityViewController *avc = [[UIActivityViewController alloc] initWithActivityItems:shareItems applicationActivities:nil];
+    
+    [self presentViewController:avc animated:YES completion:nil];
+    
+}
 
 @end
