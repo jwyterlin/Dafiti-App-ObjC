@@ -18,18 +18,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="147"/>
                         <animations/>
                     </imageView>
+                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="LLh-Ig-AR0">
+                        <rect key="frame" x="150" y="64" width="20" height="20"/>
+                        <animations/>
+                    </activityIndicatorView>
                 </subviews>
                 <animations/>
                 <constraints>
+                    <constraint firstItem="LLh-Ig-AR0" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="8kJ-14-RML"/>
                     <constraint firstAttribute="bottom" secondItem="L2e-17-Alh" secondAttribute="bottom" id="GJI-jf-zEZ"/>
                     <constraint firstItem="L2e-17-Alh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="NCj-9l-aZR"/>
                     <constraint firstItem="L2e-17-Alh" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Opx-K1-tWz"/>
                     <constraint firstAttribute="trailing" secondItem="L2e-17-Alh" secondAttribute="trailing" id="RUv-G3-wZf"/>
+                    <constraint firstItem="LLh-Ig-AR0" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Re2-BP-5I6"/>
                 </constraints>
             </tableViewCellContentView>
             <animations/>
             <connections>
                 <outlet property="image" destination="L2e-17-Alh" id="CW2-Ci-aKY"/>
+                <outlet property="loading" destination="LLh-Ig-AR0" id="tkV-JG-jDy"/>
             </connections>
             <point key="canvasLocation" x="112" y="268"/>
         </tableViewCell>

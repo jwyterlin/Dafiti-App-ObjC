@@ -8,9 +8,13 @@
 
 #import "ImageCell.h"
 
+// Service
+#import "ImageService.h"
+
 @interface ImageCell()
 
 @property(weak,nonatomic) IBOutlet UIImageView *image;
+@property(weak,nonatomic) IBOutlet UIActivityIndicatorView *loading;
 
 @end
 
@@ -53,6 +57,48 @@
     cell.backgroundColor = [UIColor clearColor];
     
     cell.image.image = [UIImage imageWithData:product.image];
+    
+}
+
+#pragma mark - Private methods
+
+-(void)defineUserPhotoWithProduct:(ProductModel *)product
+                        tableView:(UITableView *)tableView
+                        indexPath:(NSIndexPath *)indexPath
+                             cell:(ImageCell *)cell {
+    
+    if ( product.largeFrontImage ) {
+        
+        cell.image.image = [UIImage imageWithData:product.largeFrontImage];
+        return ;
+        
+    }
+    
+    cell.image.image = nil;
+    
+    if ( [Validator isEmptyString:product.largeFrontImageUrl] )
+        return;
+    
+    [cell.loading startAnimating];
+    
+    [[ImageService new] imageByUrl:product.largeFrontImageUrl completion:^(UIImage *image) {
+        
+        [cell.loading stopAnimating];
+        
+        ImageCell *helperCell = (ImageCell *)[tableView cellForRowAtIndexPath:indexPath];
+        
+        if ( helperCell ) {
+            
+            if ( image ) {
+                
+                product.largeFrontImage = UIImageJPEGRepresentation(image, 1.0);
+                helperCell.image.image = image;
+                
+            }
+            
+        }
+        
+    }];
     
 }
 
