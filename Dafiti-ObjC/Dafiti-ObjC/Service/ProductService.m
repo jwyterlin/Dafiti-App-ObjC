@@ -85,7 +85,9 @@
                       kParameterManufacturer,
                       kParameterSalePrice,
                       kParameterImage,
-                      kParameterLargeFrontImage
+                      kParameterLargeFrontImage,
+                      kParameterUrl,
+                      kParameterSKU
                      ];
     
     NSDictionary *parameters = @{

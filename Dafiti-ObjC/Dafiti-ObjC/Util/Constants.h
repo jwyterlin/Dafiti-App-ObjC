@@ -13,6 +13,7 @@
 extern NSString *const kAppDomain;
 extern NSString *const kBestBuyAPIKey;
 extern NSString *const kPipe;
+extern NSString *const kCachedImages;
 
 // Parameter Names
 extern NSString *const kParameterImage;
@@ -26,6 +27,7 @@ extern NSString *const kParameterProducts;
 extern NSString *const kParameterSalePrice;
 extern NSString *const kParameterShow;
 extern NSString *const kParameterUrl;
+extern NSString *const kParameterSKU;
 
 // Cell Nib Names
 extern NSString *const kNibNameProductCell;

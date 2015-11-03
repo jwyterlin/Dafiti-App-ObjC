@@ -32,6 +32,7 @@
     _imageUrl = json[kParameterImage];
     _largeFrontImageUrl = json[kParameterLargeFrontImage];
     _url = json[kParameterUrl];
+    _sku = [NSNumber numberWithInt:[json[kParameterSKU] intValue]];
     
     return self;
     

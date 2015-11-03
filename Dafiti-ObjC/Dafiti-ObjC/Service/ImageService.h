@@ -13,4 +13,8 @@
 
 -(void)imageByUrl:(NSString *)url completion:(void(^)(UIImage *image))completion;
 
+-(UIImage *)seekImageLocallyById:(id)identifier folderName:(NSString *)folderName filename:(id)filename;
+
+-(void)saveImageById:(id)identifier photo:(NSData *)data folderName:(NSString *)folderName fileName:(NSString*)fileName;
+
 @end

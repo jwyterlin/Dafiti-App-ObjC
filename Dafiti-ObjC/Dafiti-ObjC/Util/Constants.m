@@ -13,6 +13,7 @@
 NSString *const kAppDomain = @"Dafiti-ObjC";
 NSString *const kBestBuyAPIKey = @"zcec37d2wj2g53ksuzgncs2c";
 NSString *const kPipe = @"%7C";
+NSString *const kCachedImages = @"cachedImages";
 
 // Parameter Names
 NSString *const kParameterImage = @"image";
@@ -26,6 +27,7 @@ NSString *const kParameterProducts = @"products";
 NSString *const kParameterSalePrice = @"salePrice";
 NSString *const kParameterShow = @"show";
 NSString *const kParameterUrl = @"url";
+NSString *const kParameterSKU = @"sku";
 
 // Cell Nib Names
 NSString *const kNibNameProductCell = @"ProductCell";

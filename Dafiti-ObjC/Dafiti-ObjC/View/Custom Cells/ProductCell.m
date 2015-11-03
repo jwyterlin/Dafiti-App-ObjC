@@ -91,6 +91,7 @@
                       indexPath:(NSIndexPath *)indexPath
                       cell:(ProductCell *)cell {
     
+    // Already has image
     if ( product.image ) {
         
         cell.photo.image = [UIImage imageWithData:product.image];
@@ -98,14 +99,33 @@
         
     }
     
+    ImageService *imageService = [ImageService new];
+    
+    NSString *filename = [product.sku stringValue];
+    NSString *identifier = [NSString stringWithFormat:@"%@%@",@"normal",[product.sku stringValue]];
+    
+    // Seek image locally
+    UIImage *imageSought = [imageService seekImageLocallyById:identifier folderName:kParameterProducts filename:filename];
+    
+    if ( imageSought ) {
+        
+        product.image = UIImageJPEGRepresentation(imageSought, 1.0);
+        cell.photo.image = [UIImage imageWithData:product.image];
+        return ;
+        
+    }
+    
+    // Set to nil to avoid show wrong image of other cell
     cell.photo.image = nil;
     
+    // If doesn't have imageUrl, doesn't download
     if ( [Validator isEmptyString:product.imageUrl] )
         return;
     
+    // Download image
     [cell.loading startAnimating];
     
-    [[ImageService new] imageByUrl:product.imageUrl completion:^(UIImage *image) {
+    [imageService imageByUrl:product.imageUrl completion:^(UIImage *image) {
         
         [cell.loading stopAnimating];
         
@@ -117,6 +137,8 @@
                 
                 product.image = UIImageJPEGRepresentation(image, 1.0);
                 helperCell.photo.image = image;
+                
+                [imageService saveImageById:identifier photo:product.image folderName:kParameterProducts fileName:filename];
                 
             }
             

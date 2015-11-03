@@ -19,5 +19,6 @@
 @property(nonatomic,strong) NSData *image;
 @property(nonatomic,readonly) NSString *largeFrontImageUrl;
 @property(nonatomic,strong) NSData *largeFrontImage;
+@property(nonatomic,readonly) NSNumber *sku;
 
 @end
