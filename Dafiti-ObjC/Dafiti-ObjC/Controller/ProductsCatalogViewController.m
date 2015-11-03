@@ -167,12 +167,12 @@
                 [[Indicator shared] stopIndicatorInViewController:self];
             
             if ( hasNoConnection ) {
-                // TODO: Show alert no connection
+                [[Alert new] showNoConnectionWithViewController:self];
                 return;
             }
             
             if ( error ) {
-                // TODO: Show alert error
+                [[Alert new] showError:error viewController:self];
                 return;
             }
             
