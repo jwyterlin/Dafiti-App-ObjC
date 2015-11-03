@@ -41,6 +41,8 @@
 		7BBC2ABD1BE854EE00CBF2BD /* ImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BBC2ABB1BE854EE00CBF2BD /* ImageCell.xib */; };
 		7BBC2AC21BE857F700CBF2BD /* ProductNameCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BBC2AC01BE857F700CBF2BD /* ProductNameCell.m */; };
 		7BBC2AC31BE857F700CBF2BD /* ProductNameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BBC2AC11BE857F700CBF2BD /* ProductNameCell.xib */; };
+		7BBC2AC81BE8585300CBF2BD /* ProductInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BBC2AC61BE8585300CBF2BD /* ProductInfoCell.m */; };
+		7BBC2AC91BE8585300CBF2BD /* ProductInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BBC2AC71BE8585300CBF2BD /* ProductInfoCell.xib */; };
 		873CD34F871FEA77E5268A63 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EF87AB76D7749EC36DD95C0C /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -127,6 +129,9 @@
 		7BBC2ABF1BE857F700CBF2BD /* ProductNameCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProductNameCell.h; path = "View/Custom Cells/ProductNameCell.h"; sourceTree = "<group>"; };
 		7BBC2AC01BE857F700CBF2BD /* ProductNameCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProductNameCell.m; path = "View/Custom Cells/ProductNameCell.m"; sourceTree = "<group>"; };
 		7BBC2AC11BE857F700CBF2BD /* ProductNameCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ProductNameCell.xib; path = "View/Custom Cells/ProductNameCell.xib"; sourceTree = "<group>"; };
+		7BBC2AC51BE8585300CBF2BD /* ProductInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProductInfoCell.h; path = "View/Custom Cells/ProductInfoCell.h"; sourceTree = "<group>"; };
+		7BBC2AC61BE8585300CBF2BD /* ProductInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProductInfoCell.m; path = "View/Custom Cells/ProductInfoCell.m"; sourceTree = "<group>"; };
+		7BBC2AC71BE8585300CBF2BD /* ProductInfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ProductInfoCell.xib; path = "View/Custom Cells/ProductInfoCell.xib"; sourceTree = "<group>"; };
 		C2410786DA854FAD339AC95D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		CD22A6A18EDA6F0C2BBBCAE6 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		EF87AB76D7749EC36DD95C0C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -215,6 +220,7 @@
 		7B0157B01BE81A48001DEB37 /* Custom Cells */ = {
 			isa = PBXGroup;
 			children = (
+				7BBC2AC41BE8583700CBF2BD /* ProductInfoCell */,
 				7BBC2ABE1BE857DC00CBF2BD /* ProductNameCell */,
 				7B0157B21BE81A6E001DEB37 /* GenericCell */,
 				7BBC2AB81BE854C700CBF2BD /* ImageCell */,
@@ -560,6 +566,16 @@
 			name = ProductNameCell;
 			sourceTree = "<group>";
 		};
+		7BBC2AC41BE8583700CBF2BD /* ProductInfoCell */ = {
+			isa = PBXGroup;
+			children = (
+				7BBC2AC51BE8585300CBF2BD /* ProductInfoCell.h */,
+				7BBC2AC61BE8585300CBF2BD /* ProductInfoCell.m */,
+				7BBC2AC71BE8585300CBF2BD /* ProductInfoCell.xib */,
+			);
+			name = ProductInfoCell;
+			sourceTree = "<group>";
+		};
 		C608F47EA8B68C6E5A98FCDB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -679,6 +695,7 @@
 				7BBC2AC31BE857F700CBF2BD /* ProductNameCell.xib in Resources */,
 				7B9026561BE7D13800728508 /* Assets.xcassets in Resources */,
 				7BBC2ABD1BE854EE00CBF2BD /* ImageCell.xib in Resources */,
+				7BBC2AC91BE8585300CBF2BD /* ProductInfoCell.xib in Resources */,
 				7B9026541BE7D13800728508 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -761,6 +778,7 @@
 				7B0157B91BE81ACF001DEB37 /* ProductCell.m in Sources */,
 				7BBC2A901BE821F500CBF2BD /* Alert.m in Sources */,
 				7BBC2A9D1BE8272D00CBF2BD /* UITableView+Helper.m in Sources */,
+				7BBC2AC81BE8585300CBF2BD /* ProductInfoCell.m in Sources */,
 				7B0157B51BE81A98001DEB37 /* GenericCell.m in Sources */,
 				7B0157981BE8077B001DEB37 /* Constants.m in Sources */,
 				7BBC2AAF1BE833E300CBF2BD /* GenericLabel.m in Sources */,
