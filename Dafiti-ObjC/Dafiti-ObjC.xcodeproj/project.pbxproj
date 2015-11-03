@@ -220,11 +220,11 @@
 		7B0157B01BE81A48001DEB37 /* Custom Cells */ = {
 			isa = PBXGroup;
 			children = (
-				7BBC2AC41BE8583700CBF2BD /* ProductInfoCell */,
-				7BBC2ABE1BE857DC00CBF2BD /* ProductNameCell */,
 				7B0157B21BE81A6E001DEB37 /* GenericCell */,
 				7BBC2AB81BE854C700CBF2BD /* ImageCell */,
 				7B0157B11BE81A58001DEB37 /* ProductCell */,
+				7BBC2AC41BE8583700CBF2BD /* ProductInfoCell */,
+				7BBC2ABE1BE857DC00CBF2BD /* ProductNameCell */,
 			);
 			name = "Custom Cells";
 			sourceTree = "<group>";
