@@ -52,6 +52,14 @@
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dY3-Lc-toy">
+                        <rect key="frame" x="0.0" y="103" width="320" height="1"/>
+                        <animations/>
+                        <color key="backgroundColor" red="0.90196078431372551" green="0.90196078431372551" blue="0.90196078431372551" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="Bnq-cL-kVU"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <animations/>
                 <constraints>
@@ -64,6 +72,9 @@
                     <constraint firstItem="u71-QM-eoA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="HIm-8W-wEM"/>
                     <constraint firstItem="4hs-4T-MtF" firstAttribute="leading" secondItem="u71-QM-eoA" secondAttribute="trailing" constant="19" id="JRp-Yz-wWD"/>
                     <constraint firstItem="A8i-v8-ty8" firstAttribute="top" secondItem="4hs-4T-MtF" secondAttribute="bottom" constant="8" id="SSj-6Y-Bcv"/>
+                    <constraint firstItem="dY3-Lc-toy" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="ToY-12-TI3"/>
+                    <constraint firstAttribute="trailing" secondItem="dY3-Lc-toy" secondAttribute="trailing" id="bhN-bY-WSJ"/>
+                    <constraint firstAttribute="bottom" secondItem="dY3-Lc-toy" secondAttribute="bottom" id="dGp-Ho-yl8"/>
                     <constraint firstItem="IfH-PA-kQ0" firstAttribute="top" secondItem="A8i-v8-ty8" secondAttribute="bottom" constant="8" id="pYW-Uv-3L9"/>
                     <constraint firstItem="IfH-PA-kQ0" firstAttribute="top" secondItem="A8i-v8-ty8" secondAttribute="bottom" constant="8" id="xAf-I6-HZ0"/>
                 </constraints>
@@ -78,7 +89,7 @@
                 <outlet property="price" destination="IfH-PA-kQ0" id="yyy-2c-6dE"/>
                 <outlet property="priceWidth" destination="qFy-bI-xR6" id="e4D-yo-OMb"/>
             </connections>
-            <point key="canvasLocation" x="-423" y="217.5"/>
+            <point key="canvasLocation" x="-716" y="201.5"/>
         </tableViewCell>
     </objects>
 </document>

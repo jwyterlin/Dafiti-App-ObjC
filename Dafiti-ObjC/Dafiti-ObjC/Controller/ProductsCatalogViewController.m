@@ -45,6 +45,14 @@
     [super didReceiveMemoryWarning];
 }
 
+-(void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
+    
+    [super viewWillTransitionToSize:size withTransitionCoordinator:coordinator];
+    
+    [self.tableView reloadData];
+    
+}
+
 #pragma mark - UITableViewDataSource methods
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
