@@ -11,6 +11,7 @@
 @interface ProductModel : GenericModel
 
 @property(nonatomic,readonly) NSString *name;
+@property(nonatomic,readonly) NSString *longDescription;
 @property(nonatomic,readonly) NSString *manufacturer;
 @property(nonatomic,readonly) NSNumber *salePrice;
 @property(nonatomic,readonly) NSString *imageUrl;

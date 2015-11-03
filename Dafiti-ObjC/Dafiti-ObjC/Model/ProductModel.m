@@ -25,11 +25,12 @@
 
 -(ProductModel *)newProductWithJson:(NSDictionary *)json {
     
-    _name = json[@"name"];
-    _manufacturer = json[@"manufacturer"];
-    _salePrice = [NSNumber numberWithDouble:[json[@"salePrice"] doubleValue]];
-    _imageUrl = json[@"image"];
-    _largeFrontImageUrl = json[@"largeFrontImage"];
+    _name = json[kParameterName];
+    _longDescription = json[kParameterLongDescription];
+    _manufacturer = json[kParameterManufacturer];
+    _salePrice = [NSNumber numberWithDouble:[json[kParameterSalePrice] doubleValue]];
+    _imageUrl = json[kParameterImage];
+    _largeFrontImageUrl = json[kParameterLargeFrontImage];
     
     return self;
     

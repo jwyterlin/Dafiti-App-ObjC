@@ -6,8 +6,11 @@
 //  Copyright © 2015 Jhonathan Wyterlin. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "GenericCell.h"
 
-@interface ProductInfoCell : UITableViewCell
+// Model
+#import "ProductModel.h"
+
+@interface ProductInfoCell : GenericCell
 
 @end
