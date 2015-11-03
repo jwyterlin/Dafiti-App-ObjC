@@ -36,6 +36,9 @@
 		7BBC2AAA1BE831AD00CBF2BD /* CellHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BBC2AA91BE831AD00CBF2BD /* CellHelper.m */; };
 		7BBC2AAF1BE833E300CBF2BD /* GenericLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BBC2AAE1BE833E300CBF2BD /* GenericLabel.m */; };
 		7BBC2AB31BE8340C00CBF2BD /* CellLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BBC2AB21BE8340C00CBF2BD /* CellLabel.m */; };
+		7BBC2AB71BE850F700CBF2BD /* ProductDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BBC2AB61BE850F700CBF2BD /* ProductDetailViewController.m */; };
+		7BBC2ABC1BE854EE00CBF2BD /* ImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BBC2ABA1BE854EE00CBF2BD /* ImageCell.m */; };
+		7BBC2ABD1BE854EE00CBF2BD /* ImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BBC2ABB1BE854EE00CBF2BD /* ImageCell.xib */; };
 		873CD34F871FEA77E5268A63 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EF87AB76D7749EC36DD95C0C /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -114,6 +117,11 @@
 		7BBC2AAE1BE833E300CBF2BD /* GenericLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GenericLabel.m; path = "View/Custom Labels/GenericLabel.m"; sourceTree = "<group>"; };
 		7BBC2AB11BE8340C00CBF2BD /* CellLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CellLabel.h; path = "View/Custom Labels/CellLabel.h"; sourceTree = "<group>"; };
 		7BBC2AB21BE8340C00CBF2BD /* CellLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CellLabel.m; path = "View/Custom Labels/CellLabel.m"; sourceTree = "<group>"; };
+		7BBC2AB51BE850F700CBF2BD /* ProductDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProductDetailViewController.h; path = Controller/ProductDetailViewController.h; sourceTree = "<group>"; };
+		7BBC2AB61BE850F700CBF2BD /* ProductDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProductDetailViewController.m; path = Controller/ProductDetailViewController.m; sourceTree = "<group>"; };
+		7BBC2AB91BE854EE00CBF2BD /* ImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageCell.h; path = "View/Custom Cells/ImageCell.h"; sourceTree = "<group>"; };
+		7BBC2ABA1BE854EE00CBF2BD /* ImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageCell.m; path = "View/Custom Cells/ImageCell.m"; sourceTree = "<group>"; };
+		7BBC2ABB1BE854EE00CBF2BD /* ImageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ImageCell.xib; path = "View/Custom Cells/ImageCell.xib"; sourceTree = "<group>"; };
 		C2410786DA854FAD339AC95D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		CD22A6A18EDA6F0C2BBBCAE6 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		EF87AB76D7749EC36DD95C0C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -203,6 +211,7 @@
 			isa = PBXGroup;
 			children = (
 				7B0157B21BE81A6E001DEB37 /* GenericCell */,
+				7BBC2AB81BE854C700CBF2BD /* ImageCell */,
 				7B0157B11BE81A58001DEB37 /* ProductCell */,
 			);
 			name = "Custom Cells";
@@ -383,6 +392,7 @@
 		7B90267D1BE7D14B00728508 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				7BBC2AB41BE850BB00CBF2BD /* ProductDetailViewController */,
 				7BBC2A911BE8226600CBF2BD /* GenericViewController */,
 				7B0157A21BE809CF001DEB37 /* ProductsCatalogViewController */,
 			);
@@ -515,6 +525,25 @@
 			name = CellLabel;
 			sourceTree = "<group>";
 		};
+		7BBC2AB41BE850BB00CBF2BD /* ProductDetailViewController */ = {
+			isa = PBXGroup;
+			children = (
+				7BBC2AB51BE850F700CBF2BD /* ProductDetailViewController.h */,
+				7BBC2AB61BE850F700CBF2BD /* ProductDetailViewController.m */,
+			);
+			name = ProductDetailViewController;
+			sourceTree = "<group>";
+		};
+		7BBC2AB81BE854C700CBF2BD /* ImageCell */ = {
+			isa = PBXGroup;
+			children = (
+				7BBC2AB91BE854EE00CBF2BD /* ImageCell.h */,
+				7BBC2ABA1BE854EE00CBF2BD /* ImageCell.m */,
+				7BBC2ABB1BE854EE00CBF2BD /* ImageCell.xib */,
+			);
+			name = ImageCell;
+			sourceTree = "<group>";
+		};
 		C608F47EA8B68C6E5A98FCDB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -632,6 +661,7 @@
 				7B9026591BE7D13800728508 /* LaunchScreen.storyboard in Resources */,
 				7B0157BA1BE81ACF001DEB37 /* ProductCell.xib in Resources */,
 				7B9026561BE7D13800728508 /* Assets.xcassets in Resources */,
+				7BBC2ABD1BE854EE00CBF2BD /* ImageCell.xib in Resources */,
 				7B9026541BE7D13800728508 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -708,6 +738,7 @@
 				7B406FA51BE7D8A900CC1B43 /* AppDelegate.m in Sources */,
 				7B0157A91BE81384001DEB37 /* GenericModel.m in Sources */,
 				7B0157951BE80760001DEB37 /* ProductService.m in Sources */,
+				7BBC2AB71BE850F700CBF2BD /* ProductDetailViewController.m in Sources */,
 				7B01579E1BE80791001DEB37 /* JWNetAPIClient.m in Sources */,
 				7B0157AD1BE813E0001DEB37 /* Validator.m in Sources */,
 				7B0157B91BE81ACF001DEB37 /* ProductCell.m in Sources */,
@@ -720,6 +751,7 @@
 				7B90264B1BE7D13800728508 /* main.m in Sources */,
 				7BBC2A981BE8236200CBF2BD /* Indicator.m in Sources */,
 				7BBC2AB31BE8340C00CBF2BD /* CellLabel.m in Sources */,
+				7BBC2ABC1BE854EE00CBF2BD /* ImageCell.m in Sources */,
 				7B0157A11BE8079B001DEB37 /* Routes.m in Sources */,
 				7BBC2AAA1BE831AD00CBF2BD /* CellHelper.m in Sources */,
 				7BBC2AA61BE82E2A00CBF2BD /* UIView+Helper.m in Sources */,

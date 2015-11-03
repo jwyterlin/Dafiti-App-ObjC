@@ -70,5 +70,49 @@
             </objects>
             <point key="canvasLocation" x="410" y="337"/>
         </scene>
+        <!--Product Detail View Controller-->
+        <scene sceneID="HvN-ul-8Up">
+            <objects>
+                <viewController storyboardIdentifier="ProductDetailViewController" id="LHr-rx-L5v" customClass="ProductDetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8rT-Se-xX2"/>
+                        <viewControllerLayoutGuide type="bottom" id="gnK-9K-Kqp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dYi-8f-r6v">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="chq-9v-BpQ">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="223"/>
+                                <animations/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0AU-CV-2OQ">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="LHr-rx-L5v" id="bp3-Ut-kF7"/>
+                                    <outlet property="delegate" destination="LHr-rx-L5v" id="XPm-BB-oes"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gnK-9K-Kqp" firstAttribute="top" secondItem="0AU-CV-2OQ" secondAttribute="bottom" id="LMz-Oc-VWW"/>
+                            <constraint firstItem="0AU-CV-2OQ" firstAttribute="leading" secondItem="dYi-8f-r6v" secondAttribute="leading" id="UxZ-OP-fqF"/>
+                            <constraint firstAttribute="trailing" secondItem="0AU-CV-2OQ" secondAttribute="trailing" id="hr9-zk-PBn"/>
+                            <constraint firstItem="0AU-CV-2OQ" firstAttribute="top" secondItem="dYi-8f-r6v" secondAttribute="top" id="orm-ow-Aka"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="photo" destination="chq-9v-BpQ" id="PNI-jH-GL0"/>
+                        <outlet property="tableView" destination="0AU-CV-2OQ" id="vGy-ag-Xk0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rZ4-KZ-LuD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1051" y="337"/>
+        </scene>
     </scenes>
 </document>
