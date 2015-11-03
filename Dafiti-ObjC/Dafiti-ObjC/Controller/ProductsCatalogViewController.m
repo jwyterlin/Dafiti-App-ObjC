@@ -25,6 +25,9 @@
 @property(weak,nonatomic) IBOutlet UITableView *tableView;
 @property(strong,nonatomic) NSMutableArray *products;
 
+@property(nonatomic,strong) UIRefreshControl *refresh;
+@property(nonatomic) BOOL needsCleanProducts;
+
 @end
 
 @implementation ProductsCatalogViewController
@@ -39,6 +42,7 @@
     
     [self.tableView registerNibForCellReuseIdentifier:kNibNameProductCell];
     [self.tableView removeSeparator];
+    [self.tableView addSubview:self.refresh];
     
     [self downloadProducts];
     
@@ -92,6 +96,14 @@
 
 #pragma mark - Private methods
 
+-(void)didRefresh {
+    
+    self.needsCleanProducts = YES;
+    
+    [self downloadProducts];
+    
+}
+
 -(void)downloadProducts {
     
     NSNumber *page = [NSNumber numberWithInt:1];
@@ -100,6 +112,8 @@
     [[Indicator shared] showIndicatorWithLabel:@"Loading Products..." viewController:self];
     
     [[ProductService new] productsListWithTerm:@"MacBook" page:page limit:limit completion:^(NSArray *products, BOOL hasNoConnection, NSError *error) {
+        
+        [self.refresh endRefreshing];
         
         [[Indicator shared] stopIndicatorInViewController:self];
         
@@ -111,6 +125,11 @@
         if ( error ) {
             // TODO: Show alert error
             return;
+        }
+        
+        if ( self.needsCleanProducts ) {
+            self.needsCleanProducts = NO;
+            [self.products removeAllObjects];
         }
         
         [self.products addObjectsFromArray:products];
@@ -127,6 +146,18 @@
     if ( ! _products )
         _products = [NSMutableArray new];
     return _products;
+    
+}
+
+-(UIRefreshControl *)refresh {
+    
+    if ( ! _refresh ) {
+        _refresh = [UIRefreshControl new];
+        [_refresh addTarget:self action:@selector(didRefresh) forControlEvents:UIControlEventValueChanged];
+        _refresh.tintColor = [UIColor lightGrayColor];
+    }
+    
+    return _refresh;
     
 }
 
