@@ -17,6 +17,7 @@
 @property(weak,nonatomic) IBOutlet CellLabel *name;
 @property(weak,nonatomic) IBOutlet CellLabel *manufacturer;
 @property(weak,nonatomic) IBOutlet UILabel *price;
+@property(weak,nonatomic) IBOutlet UIActivityIndicatorView *loading;
 
 @property(weak,nonatomic) IBOutlet NSLayoutConstraint *nameWidth;
 @property(weak,nonatomic) IBOutlet NSLayoutConstraint *manufacturerWidth;
@@ -99,7 +100,14 @@
     
     cell.photo.image = nil;
     
+    if ( [Validator isEmptyString:product.imageUrl] )
+        return;
+    
+    [cell.loading startAnimating];
+    
     [[ImageService new] imageByUrl:product.imageUrl completion:^(UIImage *image) {
+        
+        [cell.loading stopAnimating];
         
         ProductCell *helperCell = (ProductCell *)[tableView cellForRowAtIndexPath:indexPath];
         

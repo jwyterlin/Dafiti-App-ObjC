@@ -29,4 +29,6 @@ NSString *const kParameterShow = @"show";
 // Cell Nib Names
 NSString *const kNibNameProductCell = @"ProductCell";
 
+const int INTERVAL_PRODUCTS = 15;
+
 @end

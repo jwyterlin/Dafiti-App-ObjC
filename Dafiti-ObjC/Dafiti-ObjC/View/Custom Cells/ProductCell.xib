@@ -22,6 +22,14 @@
                             <constraint firstAttribute="height" constant="54" id="Uqb-WG-01a"/>
                         </constraints>
                     </imageView>
+                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="XZQ-MS-p9v">
+                        <rect key="frame" x="50" y="42" width="20" height="20"/>
+                        <animations/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="64L-xa-MHw"/>
+                            <constraint firstAttribute="width" constant="20" id="PQC-cR-7BJ"/>
+                        </constraints>
+                    </activityIndicatorView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="180" translatesAutoresizingMaskIntoConstraints="NO" id="4hs-4T-MtF" customClass="CellLabel">
                         <rect key="frame" x="132" y="8" width="180" height="21"/>
                         <animations/>
@@ -71,16 +79,19 @@
                     <constraint firstItem="A8i-v8-ty8" firstAttribute="top" secondItem="4hs-4T-MtF" secondAttribute="bottom" constant="8" id="EKg-CT-Hj9"/>
                     <constraint firstItem="u71-QM-eoA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="HIm-8W-wEM"/>
                     <constraint firstItem="4hs-4T-MtF" firstAttribute="leading" secondItem="u71-QM-eoA" secondAttribute="trailing" constant="19" id="JRp-Yz-wWD"/>
+                    <constraint firstItem="XZQ-MS-p9v" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="SKm-3B-1jf"/>
                     <constraint firstItem="A8i-v8-ty8" firstAttribute="top" secondItem="4hs-4T-MtF" secondAttribute="bottom" constant="8" id="SSj-6Y-Bcv"/>
                     <constraint firstItem="dY3-Lc-toy" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="ToY-12-TI3"/>
                     <constraint firstAttribute="trailing" secondItem="dY3-Lc-toy" secondAttribute="trailing" id="bhN-bY-WSJ"/>
                     <constraint firstAttribute="bottom" secondItem="dY3-Lc-toy" secondAttribute="bottom" id="dGp-Ho-yl8"/>
+                    <constraint firstItem="XZQ-MS-p9v" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="50" id="jM3-5s-bq8"/>
                     <constraint firstItem="IfH-PA-kQ0" firstAttribute="top" secondItem="A8i-v8-ty8" secondAttribute="bottom" constant="8" id="pYW-Uv-3L9"/>
                     <constraint firstItem="IfH-PA-kQ0" firstAttribute="top" secondItem="A8i-v8-ty8" secondAttribute="bottom" constant="8" id="xAf-I6-HZ0"/>
                 </constraints>
             </tableViewCellContentView>
             <animations/>
             <connections>
+                <outlet property="loading" destination="XZQ-MS-p9v" id="R7P-7r-luQ"/>
                 <outlet property="manufacturer" destination="A8i-v8-ty8" id="ySR-gU-zjr"/>
                 <outlet property="manufacturerWidth" destination="COA-00-jRy" id="MbU-u1-Hmm"/>
                 <outlet property="name" destination="4hs-4T-MtF" id="Kph-93-VaM"/>

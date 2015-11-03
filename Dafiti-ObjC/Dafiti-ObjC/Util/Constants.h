@@ -29,4 +29,6 @@ extern NSString *const kParameterShow;
 // Cell Nib Names
 extern NSString *const kNibNameProductCell;
 
+extern const int INTERVAL_PRODUCTS;
+
 @end
