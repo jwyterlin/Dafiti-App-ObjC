@@ -82,10 +82,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="chq-9v-BpQ">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="223"/>
-                                <animations/>
-                            </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0AU-CV-2OQ">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <animations/>
@@ -106,7 +102,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="photo" destination="chq-9v-BpQ" id="PNI-jH-GL0"/>
                         <outlet property="tableView" destination="0AU-CV-2OQ" id="vGy-ag-Xk0"/>
                     </connections>
                 </viewController>

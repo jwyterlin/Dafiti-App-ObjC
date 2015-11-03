@@ -8,6 +8,12 @@
 
 #import "ImageCell.h"
 
+@interface ImageCell()
+
+@property(weak,nonatomic) IBOutlet UIImageView *image;
+
+@end
+
 @implementation ImageCell
 
 -(void)awakeFromNib {
@@ -19,14 +25,34 @@
 
 #pragma mark - Public methods
 
--(ImageCell *)imageCellAtIndexPath:(NSIndexPath *)indexPath tableView:(UITableView *)tableView {
+-(ImageCell *)imageCellAtIndexPath:(NSIndexPath *)indexPath
+                         tableView:(UITableView *)tableView
+                           product:(ProductModel *)product {
     
     ImageCell *cell = [tableView dequeueReusableCellWithIdentifier:kNibNameImageCell forIndexPath:indexPath];
+    [self configureImageCell:cell tableView:tableView indexPath:indexPath product:product];
+    
+    return cell;
+    
+}
+
+-(void)configureImageCell:(ImageCell *)cell
+                tableView:(UITableView *)tableView
+                indexPath:(NSIndexPath *)indexPath
+                  product:(ProductModel *)product {
+    
+    if ( product == nil ) {
+        
+        cell.image.image = nil;
+        
+        return;
+        
+    }
     
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.backgroundColor = [UIColor clearColor];
     
-    return cell;
+    cell.image.image = [UIImage imageWithData:product.image];
     
 }
 

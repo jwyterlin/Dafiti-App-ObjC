@@ -25,6 +25,8 @@
     [super setSelected:selected animated:animated];
 }
 
+#pragma mark - Public methods
+
 -(ProductInfoCell *)productInfoCellAtIndexPath:(NSIndexPath *)indexPath
                                      tableView:(UITableView *)tableView
                                        product:(ProductModel *)product {

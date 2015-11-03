@@ -404,8 +404,8 @@
 		7B90267D1BE7D14B00728508 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				7BBC2AB41BE850BB00CBF2BD /* ProductDetailViewController */,
 				7BBC2A911BE8226600CBF2BD /* GenericViewController */,
+				7BBC2AB41BE850BB00CBF2BD /* ProductDetailViewController */,
 				7B0157A21BE809CF001DEB37 /* ProductsCatalogViewController */,
 			);
 			name = Controller;

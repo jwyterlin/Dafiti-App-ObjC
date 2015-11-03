@@ -8,6 +8,11 @@
 
 #import "GenericViewController.h"
 
+// Model
+#import "ProductModel.h"
+
 @interface ProductDetailViewController : GenericViewController
+
+@property(nonatomic,strong) ProductModel *product;
 
 @end

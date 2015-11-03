@@ -13,4 +13,13 @@
 
 @interface ProductInfoCell : GenericCell
 
+-(ProductInfoCell *)productInfoCellAtIndexPath:(NSIndexPath *)indexPath
+                                     tableView:(UITableView *)tableView
+                                       product:(ProductModel *)product;
+
+-(void)configureProductInfoCell:(ProductInfoCell *)cell
+                      tableView:(UITableView *)tableView
+                      indexPath:(NSIndexPath *)indexPath
+                        product:(ProductModel *)product;
+
 @end

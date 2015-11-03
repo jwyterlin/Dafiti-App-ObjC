@@ -20,6 +20,9 @@
 // Util
 #import "CellHelper.h"
 
+// Controller
+#import "ProductDetailViewController.h"
+
 @interface ProductsCatalogViewController()<UITableViewDataSource,UITableViewDelegate,CellHelperDelegate>
 
 @property(weak,nonatomic) IBOutlet UITableView *tableView;
@@ -89,6 +92,19 @@
     
     CGFloat height = [[CellHelper new] heightForCellAtIndexPath:indexPath tableView:tableView cellIdentifier:kNibNameProductCell delegate:self];
     return height;
+    
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    ProductModel *product = self.products[indexPath.row];
+    
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    
+    ProductDetailViewController *viewControllerToPresent = [storyboard instantiateViewControllerWithIdentifier:@"ProductDetailViewController"];
+    viewControllerToPresent.product = product;
+    
+    [self.navigationController pushViewController:viewControllerToPresent animated:YES];
     
 }
 
